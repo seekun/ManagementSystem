@@ -3,6 +3,45 @@
   <component name="ChangeListManager">
     <list default="true" id="3c677f30-d31d-48d6-81e0-4db33f4d5caf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/django_auth_example/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/django_auth_example/password_reset_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/django_auth_example/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/django_auth_example/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/django_auth_example/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/registration/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/registration/password_change_done.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/registration/password_change_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/registration/password_reset_complete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/registration/password_reset_confirm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/registration/password_reset_done.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/users/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/backends.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/migrations/0002_auto_20180527_2038.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/migrations/0003_remove_user_nickname.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/migrations/0004_user_user_number.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/migrations/0005_auto_20180528_0946.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/views.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +68,29 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/django_auth_example/templates/web/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="71" column="58" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/django_auth_example/web/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="e#0#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -98,23 +159,54 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="ManagementSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ManagementSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ManagementSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ManagementSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ManagementSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -125,7 +217,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.mongoOptions" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -213,6 +305,30 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32931727" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494929" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32931727" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32931727" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32931727" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32927653" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32927653" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -228,13 +344,7 @@
     <entry file="file://$PROJECT_DIR$/django_auth_example/templates/registration/password_reset_confirm.html" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/templates/registration/password_reset_complete.html" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/users/backends.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/auth/locale/zh_Hans/LC_MESSAGES/django.po">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="293" selection-start-line="293" selection-end-line="293" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/auth/locale/zh_Hans/LC_MESSAGES/django.po" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/users/forms.py" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/templates/users/register.html" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/users/urls.py" />
@@ -246,8 +356,24 @@
     <entry file="file://$PROJECT_DIR$/django_auth_example/templates/registration/login.html" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/users/models.py" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/web/models.py" />
-    <entry file="file://$PROJECT_DIR$/django_auth_example/web/views.py" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/django_auth_example/settings.py" />
-    <entry file="file://$PROJECT_DIR$/django_auth_example/templates/web/index.html" />
+    <entry file="file://$PROJECT_DIR$/ManagementSystem/users/views.py" />
+    <entry file="file://$PROJECT_DIR$/django_auth_example/templates/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="71" column="58" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_auth_example/web/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
