@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>您的个人信息</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/new_blah.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/semantic.css' %}">
+    <script src="js/semantic.js"></script>
+     <script src="js/jquery.js"></script>
+       <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+       <script
+         src="https://code.jquery.com/jquery-3.1.1.min.js"
+         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+         crossorigin="anonymous">
+       </script>
+     <script src="semantic/dist/semantic.min.js"></script>
+</head>
+<body>
+    <div class="ui center segment">
+         <h2>你已登录，欢迎你：<a href="#">{{ user.english_name }}</a></h2>
+        <table class="ui table">
+          <thead>
+            <tr>
+              <th>用户名</th>
+              <th>所属院系</th>
+              <th>论文署名</th>
+              <th>工号</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ user.username }}</td>
+              <td>{{ user.department }}</td>
+              <td>{{ user.english_name}}</td>
+                <td>{{ user.user_number }}</td>
+            </tr>
+          </tbody>
+          <tfoot class="full-width">
+            <tr>
+              <th></th>
+
+
+                <div class="ui  inverted blue button">
+                    <form action="" method="POST">
+                     {% csrf_token %}
+                      <input type="hidden" name="q"  value="{{ user.english_name }}"/>
+                      <input type="submit"  value="查看您的论文信息">
+                    </form>
+                </div>
+              </th>
+            </tr>
+          </tfoot>
+        </table>
+    </div>
+</body>
+</html>

@@ -3,11 +3,11 @@ from .models import ArtiInFo
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
-def index(request):
-
+def paper(request, query=None):
+    print(query)
     limit = 5
     queryset_list = ArtiInFo.objects.all()
-    query = request.GET.get("q")
+    # query = request.GET.get("q")
     find_paper = []
     for i in queryset_list:
         if query:
@@ -28,20 +28,38 @@ def index(request):
     return render(request, 'web/index.html', {'find': find})
 
 
-def search(request):
-    limit = 4
-    queryset_list = ArtiInFo.objects.all()
-    query = request.GET.get("q")
-    find = []
-    for i in queryset_list:
-        if query:
-            if query in i.title:
-                find.append(i)
+def index(request):
+    return render(request, 'web/index.html')
 
-    paginator = Paginator(find, limit)
-    page = request.GET.get('page', 1)
-    loaded = paginator.page(page)
-    context = {
-        'find': loaded
-    }
-    return render(request, 'index.html', context)
+
+def search(request):
+    query = request.GET.get("q")
+    if query:
+        limit = 4
+        queryset_list = ArtiInFo.objects.all()
+
+        find = []
+        for i in queryset_list:
+            if query:
+                if query in i.title:
+                    find.append(i)
+
+        paginator = Paginator(find, limit)
+        page = request.GET.get('page', 1)
+        find = paginator.page(page)
+        context = {
+            'find': find
+        }
+        return render(request, 'web/search_result.html', context)
+    else:
+        return render(request, 'web/search.html')
+
+
+def profile(request):
+    if request.method == 'POST':
+        query = request.POST.get("q")
+
+        return paper(request, query)
+# 开始的时候没有加return,直接调用paper视图函数,结果没有返回结果.
+
+    return render(request, 'web/user_profile.html')

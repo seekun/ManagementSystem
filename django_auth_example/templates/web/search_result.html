@@ -1,0 +1,82 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/new_blah.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/semantic.css' %}">
+    <script src="js/semantic.js"></script>
+     <script src="js/jquery.js"></script>
+{#    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">#}
+{#    <script#}
+{#      src="https://code.jquery.com/jquery-3.1.1.min.js"#}
+{#      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="#}
+{#      crossorigin="anonymous"></script>#}
+{#    <script src="semantic/dist/semantic.min.js"></script>#}
+</head>
+<body>
+
+    <div class="ui center very padded segment">
+        <form action="" method="GET">
+             {% csrf_token %}
+          <input type="text" name="q" placeholder="输入要查询的论文"/>
+          <input type="submit"  value="Search">
+    </form>
+    </div>
+
+    <div class="ui segment">
+        <table class="ui table">
+          <thead>
+            <tr>
+                  <th>论文题目</th>
+                  <th>作者名单</th>
+                  <th>分区索引</th>
+                  <th>分区索引目录</th>
+                  <td>页</td>
+                  <th>发表期刊</th>
+                  <th>卷</th>
+                  <th>期</th>
+                  <th>发表日期</th>
+                  <th>信息是否正确</th>
+            </tr>
+          </thead>
+          <tbody>
+          {%  for item in find %}
+            <tr>
+                 <td>{{ item.title }}</td>
+                 <td>{{ item.author }}</td>
+                 <td>{{ item.dol }}</td>
+                 <td>{{ item.dol_catalog }}</td>
+                 <td>{{ item.leaf }}</td>
+                 <td>{{ item.periodical }}</td>
+                 <td>{{ item.stage }}</td>
+                 <td>{{ item.volume }}</td>
+                 <td>{{ item.year}}</td>
+                 <td>
+                     {% if item.checkout %}
+                       <button class="ui positive basic button">
+                           正确
+                       </button>
+                     {% else %}
+                        <button class="ui negative button button">错误</button>
+                     {% endif %}
+                 </td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+
+        <div class="main-content-pagitor">
+            {% if find.has_previous %}
+                <a href="?page={{ find.previous_page_number }}">< Pre </a>
+            {% endif %}
+            <span> {{ find.number }} of {{ find.paginator.num_pages }} </span>
+            {% if find.has_next %}
+                <a href="?page={{ find.next_page_number }}">Next ></a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 安徽大学论文管理系统</p>
+    </div>
+
+</body>
+</html>

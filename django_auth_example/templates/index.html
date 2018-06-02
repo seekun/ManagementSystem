@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -6,6 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>首页</title>
     <link rel="stylesheet" href="https://unpkg.com/mobi.css/dist/mobi.min.css">
+     <link rel="stylesheet" type="text/css" href="{% static 'css/new_blah.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/semantic.css' %}">
+    <script src="js/semantic.js"></script>
+     <script src="js/jquery.js"></script>
+       <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+       <script
+         src="https://code.jquery.com/jquery-3.1.1.min.js"
+         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+         crossorigin="anonymous">
+       </script>
+     <script src="semantic/dist/semantic.min.js"></script>
 </head>
 <body>
 <div class="flex-center">
@@ -15,7 +27,7 @@
 
                 {% if user.is_authenticated %}
                   <p>你已登录，欢迎你：<a href="#">{{ user.username }}</a></p>
-                  <a href="web/index">进入您的个人主页</a>
+                  <a href="web/profile">进入您的个人主页</a>
                   <button class="btn btn-default"><a href="{% url 'logout' %}?next={{ request.path }}">注销登录</a>
                   </button>
                   <button class="btn btn-default"><a href="{% url 'password_change' %}?next={{ request.path }}">修改密码</a>
@@ -30,6 +42,9 @@
                     <button class="btn btn-default"><a href="{% url 'users:register' %}">注册</a></button>
                 </p>
             {% endif %}
+            <br>
+            <br>
+            <a href="web/search"> <h3>进入搜索页面</h3></a>
         </div>
     </div>
 </div>

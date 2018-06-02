@@ -3,7 +3,6 @@
 <head>
     <link rel="stylesheet" type="text/css" href="{% static 'css/new_blah.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/semantic.css' %}">
-    <script type="text/javascript" src="{% static 'js/vue1.js' %}"></script>
     <script src="js/semantic.js"></script>
      <script src="js/jquery.js"></script>
        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
@@ -13,9 +12,8 @@
          crossorigin="anonymous">
        </script>
      <script src="semantic/dist/semantic.min.js"></script>
-
 </head>
-<body id="app">
+<body>
 
     <!--<form action="" method="POST">-->
          <!--{% csrf_token %}-->
@@ -26,6 +24,7 @@
          <form action="" method="GET">
          {% csrf_token %}
           <input type="hidden" name="q"  value="{{ user.english_name }}"/>
+          <input type="submit"  value="查看您的论文信息">
         </form>
     </div>
     <!--<div class="header">-->
@@ -36,8 +35,7 @@
             <!--<li><a href="#">Other</a></li>-->
         <!--</ul>-->
     <!--</div>-->
-    <div class="ui very padded segment">
-        <h2>您的论文信息如下:</h2>
+    <div class="main-content">
         <table class="ui table">
           <thead>
             <tr>
@@ -67,79 +65,49 @@
                  <td>{{ item.year}}</td>
                  <td>
                      {% if item.checkout %}
-                       <button class="ui positive basic button" v-on:onclick="reverse">
+                       <button class="ui positive basic button">
                            正确
                        </button>
                      {% else %}
                         <button class="ui negative button button">错误</button>
                      {% endif %}
+                     <button class="ui toggle button">Vote</button>
                      <!--{{ item.checkout }}-->
                  </td>
-
             </tr>
           {% endfor %}
           </tbody>
           <tfoot class="full-width">
             <tr>
-
+              <th></th>
+              <th colspan="4">
+                <div class="ui right floated small primary labeled icon button">
+                  <i class="user icon"></i> Add User
+                </div>
+                <div class="ui small button">
+                  Approve
+                </div>
+                <div class="ui small  disabled button">
+                  Approve All
+                </div>
+              </th>
             </tr>
           </tfoot>
         </table>
-                <div class="main-content-pagitor">
-                    {% if find.has_previous %}
-                        <a href="?page={{ find.previous_page_number }}">< Pre </a>
-                    {% endif %}
-                    <span> {{ find.number }} of {{ find.paginator.num_pages }} </span>
-                    {% if find.has_next %}
-                        <a href="?page={{ find.next_page_number }}">Next ></a>
-                    {% endif %}
-                </div>
 
+        <div class="main-content-pagitor">
+            {% if find.has_previous %}
+                <a href="?page={{ find.previous_page_number }}">< Pre </a>
+            {% endif %}
+            <span> {{ find.number }} of {{ find.paginator.num_pages }} </span>
+            {% if find.has_next %}
+                <a href="?page={{ find.next_page_number }}">Next ></a>
+            {% endif %}
+        </div>
     </div>
     <div class="footer">
         <p>&copy;安徽大学论文管理系统</p>
     </div>
-  <script>
-      semantic.button = {};
-
-// ready event
-semantic.button.ready = function() {
-
-  // selector cache
-  var
-    $buttons = $('.ui.buttons .button'),
-    $toggle  = $('.main .ui.toggle.button'),
-    $button  = $('.ui.button').not($buttons).not($toggle),
-    // alias
-    handler = {
-
-      activate: function() {
-        $(this)
-          .addClass('active')
-          .siblings()
-          .removeClass('active')
-        ;
-      }
-
-    }
-  ;
-
-  $buttons
-    .on('click', handler.activate)
-  ;
-
-
-  $toggle
-    .state({
-      text: {
-        inactive : 'Vote',
-        active   : 'Voted'
-      }
-    })
-  ;
-
-};
-  </script>
 
 </body>
 </html>
