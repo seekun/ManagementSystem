@@ -2,46 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c677f30-d31d-48d6-81e0-4db33f4d5caf" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/django_auth_example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django_auth_example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/django_auth_example/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/django_auth_example/password_reset_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/django_auth_example/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/django_auth_example/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/django_auth_example/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/registration/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/registration/password_change_done.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/registration/password_change_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/registration/password_reset_complete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/registration/password_reset_confirm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/registration/password_reset_done.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/users/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/templates/web/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/backends.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/migrations/0002_auto_20180527_2038.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/migrations/0003_remove_user_nickname.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/migrations/0004_user_user_number.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/migrations/0005_auto_20180528_0946.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/users/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ManagementSystem/web/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_auth_example/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_auth_example/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/activate" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/activate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/activate.csh" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/activate.csh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/activate.fish" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/activate.fish" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/django-admin" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/django-admin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/django-admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/django-admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/easy_install" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/easy_install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/easy_install-3.6" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/easy_install-3.6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/pip" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/pip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/pip3" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/pip3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/pip3.6" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/pip3.6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/python" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/python" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/python3" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/python3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/python3.6" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/python3.6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/Django-2.0.5.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/Django-2.0.5.dist-info/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/Django-2.0.5.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/Django-2.0.5.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/Django-2.0.5.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/Django-2.0.5.dist-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/Django-2.0.5.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/admin/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/admin/options.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/gis/geos/prototypes/io.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/gis/geos/prototypes/io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/shortcuts.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/shortcuts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/template/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/template/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/urls/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/urls/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/urls/resolvers.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/urls/resolvers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,20 +65,41 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_auth_example/templates/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state>
               <caret line="71" column="58" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_auth_example/web/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="-8">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
               <folding>
                 <element signature="e#0#68#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/django_auth_example/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#22#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/django_auth_example/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -131,10 +145,11 @@
         <option value="$PROJECT_DIR$/django_auth_example/web/models.py" />
         <option value="$PROJECT_DIR$/django_auth_example/django_auth_example/urls.py" />
         <option value="$PROJECT_DIR$/django_auth_example/web/urls.py" />
-        <option value="$PROJECT_DIR$/django_auth_example/templates/index.html" />
         <option value="$PROJECT_DIR$/django_auth_example/web/views.py" />
         <option value="$PROJECT_DIR$/django_auth_example/django_auth_example/settings.py" />
         <option value="$PROJECT_DIR$/django_auth_example/templates/web/index.html" />
+        <option value="$PROJECT_DIR$/django_auth_example/manage.py" />
+        <option value="$PROJECT_DIR$/django_auth_example/templates/index.html" />
       </list>
     </option>
   </component>
@@ -148,8 +163,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1969" />
-    <option name="y" value="64" />
+    <option name="x" value="1987" />
+    <option name="y" value="45" />
     <option name="width" value="1521" />
     <option name="height" value="844" />
   </component>
@@ -164,44 +179,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
+              <item name="ManagementSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ManagementSystem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ManagementSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ManagementSystem" type="462c0819:PsiDirectoryNode" />
               <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_auth_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-              <item name="django_auth_example" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -214,7 +198,7 @@
     <property name="SearchEverywhereHistoryKey" value="contrib/auth/loc&#9;FILE&#9;file:///Users/sk/PycharmProjects/django_auth_example/venv/lib/python3.6/site-packages/django/contrib/auth/locale&#10;user&#9;null&#9;null&#10;sett&#9;FILE&#9;file:///Users/sk/PycharmProjects/django_auth_example/django_auth_example/django_auth_example/settings.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -280,54 +264,54 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1969" y="64" width="1521" height="844" extended-state="0" />
+    <frame x="1987" y="45" width="1521" height="844" extended-state="0" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24917817" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32931727" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" weight="0.35282052" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32931727" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32931727" />
-      <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32927653" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32931727" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494929" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32927653" />
-      <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49947917" visible="true" weight="0.46675712" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32927653" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32927653" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32931727" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494929" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32931727" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32931727" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32931727" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32927653" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32927653" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32931727" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" id="SciView" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="4" weight="0.32927653" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32931727" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,6 +321,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/django_auth_example/templates/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" column="58" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_auth_example/web/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/django_auth_example/users/admin.py" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/templates/registration/password_change_form.html" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/django_auth_example/password_reset_form.html" />
@@ -352,7 +353,6 @@
     <entry file="file://$PROJECT_DIR$/django_auth_example/web/urls.py" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/users/views.py" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/templates/registration/password_change_done.html" />
-    <entry file="file://$PROJECT_DIR$/django_auth_example/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/templates/registration/login.html" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/users/models.py" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/web/models.py" />
@@ -360,18 +360,35 @@
     <entry file="file://$PROJECT_DIR$/ManagementSystem/users/views.py" />
     <entry file="file://$PROJECT_DIR$/django_auth_example/templates/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state>
           <caret line="71" column="58" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django_auth_example/web/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="-8">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
           <folding>
             <element signature="e#0#68#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_auth_example/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_auth_example/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
         </state>
       </provider>
     </entry>
