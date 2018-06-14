@@ -1,37 +1,190 @@
+{% load static %}
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html lang="zh-cn">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>首页</title>
-    <link rel="stylesheet" href="https://unpkg.com/mobi.css/dist/mobi.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>安徽大学论文管理系统</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-<div class="flex-center">
-    <div class="container">
-        <div>
-            <h1 class="logo"><a href="{% url 'index' %}">安徽大学论文管理系统</a></h1>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-                {% if user.is_authenticated %}
-                  <p>你已登录，欢迎你：<a href="#">{{ user.username }}</a></p>
-                  <a href="web/index">进入您的个人主页</a>
-                  <button class="btn btn-default"><a href="{% url 'logout' %}?next={{ request.path }}">注销登录</a>
-                  </button>
-                  <button class="btn btn-default"><a href="{% url 'password_change' %}?next={{ request.path }}">修改密码</a>
-                  </button>
-                {% else %}
-                <p>你还没有登录，请
-                    <button class="btn btn-default">
-                       <a href="{% url 'login' %}?next={{ request.path }}">登录</a>
-                        <input type="hidden" name="next" value="{{ next }}"/>
-                    </button>
-                    或者
-                    <button class="btn btn-default"><a href="{% url 'users:register' %}">注册</a></button>
-                </p>
-            {% endif %}
+    <div class="site-bg"></div>
+    <div class="site-bg-overlay"></div>
+
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <p class="phone-info">Call us: <a href="#">123-456-789</a></p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-linkedin"></a></li>
+                            <li><a href="#" class="fa fa-dribbble"></a></li>
+                            <li><a href="#" class="fa fa-rss"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- .top-header -->
+
+
+
+
+    <div class="container" id="page-content">
+        <div class="row">
+            <div class="col-md-9 col-sm-12 content-holder">
+                <!-- CONTENT -->
+                <div id="menu-container">
+
+                    <div class="logo-holder logo-top-margin">
+                        <a href="#" class="site-brand"><img src="static/images/logo.png" alt=""></a>
+                    </div>
+
+
+                    <div id="menu-1" class="homepage home-section text-center">
+                        <div class="welcome-text">
+                            <h2>欢迎进入, <strong>安徽大学论文管理系统</strong></h2>
+                            <p><span class="orange">登录</span>可获得更多详情</p>
+                            <form action="#" method="get" class="search-form">
+                                <div class="row">
+                                    <fieldset class="col-md-offset-2 col-md-6">
+                                        <input name="search-text" type="text" class="text" id="search-text" placeholder="您要搜索的内容">
+                                    </fieldset>
+                                    <fieldset class="col-md-4 button-holder">
+                                        <input name="submit" type="submit" class="button default" id="submit" value="搜索">
+                                    </fieldset>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="menu-2" class="content register-section">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-8">
+                                <div class="box-content">
+                                    <h3 class="widget-title">注册</h3>
+                                    <form class="register-form">
+                                        <fieldset>
+                                            <h2>用户名:</h2><input type="text" class="name" id="name" placeholder="Name...">
+                                        </fieldset>
+                                        <fieldset>
+                                            <h2>密码:</h2><input type="text" class="password" id="password" placeholder="Password...">
+                                        </fieldset>
+                                        <fieldset>
+                                            <h2>工号:</h2><input type="text" class="number" id="number" placeholder="Number...">
+                                        </fieldset>
+                                        <fieldset>
+                                            <h2>邮箱:</h2><input type="email" class="email" id="email" placeholder="Email...">
+                                        </fieldset>
+                                        <fieldset>
+                                            <input type="submit" class="button" id="button" value="确认">
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div id="menu-3" class="content login-section">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-8">
+                                <div class="box-content">
+                                    <h3 class="widget-title">登录</h3>
+                                        {% if user.is_authenticated %}
+                                          <p>你已登录，欢迎你：<a href="#">{{ user.username }}</a></p>
+                                          <a href="web/profile">进入您的个人主页</a>
+                                          <button class="btn btn-default"><a href="{% url 'logout' %}?next={{ request.path }}">注销登录</a>
+                                          </button>
+                                          <button class="btn btn-default"><a href="{% url 'password_change' %}?next={{ request.path }}">修改密码</a>
+                                          </button>
+                                        {% else %}
+                                        <p>你还没有登录，请登录或者
+                                            <button class="content register-section">注册</button>
+                                            <form class="register-form">
+                                            <fieldset>
+                                                <h2>用户名:</h2><input type="text" class="name" id="loginname" placeholder="Name...">
+                                            </fieldset>
+                                            <fieldset>
+                                                <h2>密码:</h2><input type="text" class="password" id="loginpassword" placeholder="Password...">
+                                            </fieldset>
+                                            <fieldset>
+                                                <h2>工号:</h2><input type="text" class="number" id="loginnumber" placeholder="Number...">
+                                            </fieldset>
+                                            <fieldset>
+                                                <input type="submit" class="button" id="loginbutton" value="登录">
+                                            </fieldset>
+                                            </form>
+                                        </p>
+                                    {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div id="menu-4" class="content contact-section"></div>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-3 hidden-sm">
+
+                <nav id="nav" class="main-navigation hidden-xs hidden-sm">
+                    <ul class="main-menu">
+                        <li>
+                            <a class="show-1 active homebutton" href="#"><i class="fa fa-home"></i>首页</a>
+                        </li>
+                        <li>
+                            <a class="show-2 registerbutton" href="#"><i class="fa fa-user"></i>注册</a>
+                        </li>
+                        <li>
+                            <a class="show-3 loginbutton" href="#"><i class="fa fa-user"></i>登录</a>
+                        </li>
+                        <li>
+                            <a class="show-5 contactbutton" href="#"><i class="fa fa-envelope"></i>关于我们</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
         </div>
     </div>
-</div>
+
+
+    <div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright &copy; 2018 Company Anhui Univ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="static/js/plugins.js"></script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>

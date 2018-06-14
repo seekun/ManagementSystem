@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div class="ui center very padded segment">
+        <form action="" method="GET">
+         {% csrf_token %}
+          <input type="text" name="q" placeholder="输入要查询的论文题目"/>
+          <input type="submit"  value="Search">
+    </form>
+   </div>
+</body>
+</html>
