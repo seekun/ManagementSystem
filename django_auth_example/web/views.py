@@ -12,7 +12,7 @@ def paper(request, query=None):
     for i in queryset_list:
         if query:
             if query in i.author:
-               find_paper.append(i)
+                find_paper.append(i)
 
     paginator = Paginator(find_paper, limit)
     page = request.GET.get('page')
@@ -60,6 +60,6 @@ def profile(request):
         query = request.POST.get("q")
 
         return paper(request, query)
-# 开始的时候没有加return,直接调用paper视图函数,结果没有返回结果.
+    # 开始的时候没有加return,直接调用paper视图函数,结果没有返回结果.
 
     return render(request, 'web/user_profile.html')

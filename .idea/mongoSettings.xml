@@ -16,5 +16,6 @@
         </ServerConfiguration>
       </list>
     </option>
+    <option name="shellPath" value="/usr/local/bin/mongo" />
   </component>
 </project>

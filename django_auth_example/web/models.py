@@ -1,6 +1,7 @@
 from mongoengine import *
 from mongoengine import connect
-connect('webofscience', host='127.0.0.1', port=27017)
+
+connect('paper', host='127.0.0.1', port=27017)
 
 
 class ArtiInFo(Document):
