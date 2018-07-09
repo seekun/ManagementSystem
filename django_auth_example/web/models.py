@@ -5,8 +5,8 @@ connect('paper', host='127.0.0.1', port=27017)
 
 
 class ArtiInFo(Document):
-    authors = StringField('作者')
-    authors_number = StringField('作者地址')
+    authors = ListField()
+    authors_number = ListField()
     title = StringField('论文标题')
     periodical = StringField('发表期刊')
     year = StringField('发表日期')
@@ -20,7 +20,7 @@ class ArtiInFo(Document):
     body = StringField('摘要')
     author_key_words = StringField('作者关键词')
     Key_words_pluses = StringField('KeyWords Plus')
-    # KeyWords_Plus = StringField("KeyWords ")
+    KeyWords_Plus = StringField("KeyWords ")
     communication_author = StringField('通讯作者')
     communication_author_address = StringField('通讯作者地址')
     addresses = ListField()
@@ -35,7 +35,7 @@ class ArtiInFo(Document):
     eISSN = StringField('eISSN')
     Research_fields = StringField('研究方向')
     Collection_number = StringField('入藏号')
-    IDS号 = StringField('IDS')
+    IDS = StringField('IDS')
     checkout = BooleanField(default=True)
     # 在括号里加的字段,当时不知道能不能加,加了之后也不知道起不起作用,当时完全是凭感觉加的,但是数据类型的字段修改为
     # ListField()时,如果还继续只加一个字段说明,与list的类型不符,所以报错了.

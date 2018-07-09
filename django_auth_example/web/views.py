@@ -11,7 +11,7 @@ def paper(request, query=None):
     find_paper = []
     for i in queryset_list:
         if query:
-            if query in i.author:
+            if query in i.authors:
                find_paper.append(i)
 
     paginator = Paginator(find_paper, limit)
