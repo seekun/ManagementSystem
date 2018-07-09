@@ -450,7 +450,7 @@ def parse_detail(html):
         'eISSN': eISSN,
         'Research_fields': Research_fields,
         'Collection_number': Collection_number,
-        'IDS号': IDS
+        'IDS': IDS
     }
 
 
