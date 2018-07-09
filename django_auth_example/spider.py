@@ -435,7 +435,7 @@ def parse_detail(html):
         'JCR_partitions': JCR_partitions,
         'body': body,
         'author_key_words': Author_key_words,
-        'KeyWords Plus': Key_words_pluses,
+        'KeyWords_Plus': Key_words_pluses,
         'Key_words_pluses': communication_author,
         'communication_author_address': communication_author_address,
         'addresses': addresses,
