@@ -136,7 +136,7 @@ LANGUAGES = (
 )
 
 from mongoengine import connect
-connect('webofscience', host='127.0.0.1', port=27017)
+connect('paper', host='127.0.0.1', port=27017)
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/upload/'
