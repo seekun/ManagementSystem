@@ -1,9 +1,11 @@
 from django.shortcuts import render, Http404, redirect, HttpResponse
 from .models import ArtiInFo
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+# from django_auth_example.users.models import User
 
 
 def paper(request, query=None):
+<<<<<<< HEAD
     print(query)
     limit = 5
     queryset_list = ArtiInFo.objects.all()
@@ -13,19 +15,35 @@ def paper(request, query=None):
         if query:
             if query in i.author:
                 find_paper.append(i)
+=======
+    context = {}
+    if query:
+        queryset_list = ArtiInFo.objects.all()
+        find = []
+        for i in queryset_list:
+            if query:
+                if query in i.title:
+                    find.append(i)
+>>>>>>> change_model
 
-    paginator = Paginator(find_paper, limit)
-    page = request.GET.get('page')
-    try:
-        contacts = paginator.page(page)
-    except PageNotAnInteger:
-        # 如果用户请求的页码号不是整数，显示第一页
-        contacts = paginator.page(1)
-    except EmptyPage:
-        # 如果用户请求的页码号超过了最大页码号，显示最后一页
-        contacts = paginator.page(paginator.num_pages)
-    find = contacts
-    return render(request, 'web/index.html', {'find': find})
+        # page_robot = Paginator(find, 5)
+        # page = request.GET.get('page')
+        # vids_list = page_robot.get_page(page)
+
+        # try:
+        #     vids_list = page_robot.get_page(page)
+        # except PageNotAnInteger:
+        #     # 如果用户请求的页码号不是整数，显示第一页
+        #     vids_list = page_robot.get_page(1)
+        # except EmptyPage:
+        #     # 如果用户请求的页码号超过了最大页码号，显示最后一页
+        #     vids_list = page_robot.get_page(vids_list.num_pages)
+        # find = vids_list
+        context['find'] = find
+        context['query'] = query
+        return render(request, 'web/index.html', context)
+    else:
+        return render(request, 'web/index.html')
 
 
 def index(request):
@@ -33,23 +51,31 @@ def index(request):
 
 
 def search(request):
+    context = {}
     query = request.GET.get("q")
     if query:
-        limit = 4
         queryset_list = ArtiInFo.objects.all()
-
         find = []
         for i in queryset_list:
             if query:
                 if query in i.title:
                     find.append(i)
 
-        paginator = Paginator(find, limit)
-        page = request.GET.get('page', 1)
-        find = paginator.page(page)
-        context = {
-            'find': find
-        }
+        page_robot = Paginator(find, 5)
+        page = request.GET.get('page')
+        vids_list = page_robot.get_page(page)
+
+        try:
+            vids_list = page_robot.get_page(page)
+        except PageNotAnInteger:
+            # 如果用户请求的页码号不是整数，显示第一页
+            vids_list = page_robot.get_page(1)
+        except EmptyPage:
+            # 如果用户请求的页码号超过了最大页码号，显示最后一页
+            vids_list = page_robot.get_page(vids_list.num_pages)
+        find = vids_list
+        context['find'] = find
+        context['query'] = query
         return render(request, 'web/search_result.html', context)
     else:
         return render(request, 'web/search.html')
@@ -58,8 +84,43 @@ def search(request):
 def profile(request):
     if request.method == 'POST':
         query = request.POST.get("q")
-
         return paper(request, query)
     # 开始的时候没有加return,直接调用paper视图函数,结果没有返回结果.
+<<<<<<< HEAD
 
     return render(request, 'web/user_profile.html')
+=======
+
+    return render(request, 'web/user_profile.html')
+
+
+# def mypaper(request):
+#     context = {}
+#     print(query)
+#     if query:
+#         queryset_list = ArtiInFo.objects.all()
+#         find = []
+#         for i in queryset_list:
+#             if query:
+#                 if query in i.title:
+#                     find.append(i)
+#
+#         page_robot = Paginator(find, 5)
+#         page = request.GET.get('page')
+#         vids_list = page_robot.get_page(page)
+#
+#         try:
+#             vids_list = page_robot.get_page(page)
+#         except PageNotAnInteger:
+#             # 如果用户请求的页码号不是整数，显示第一页
+#             vids_list = page_robot.get_page(1)
+#         except EmptyPage:
+#             # 如果用户请求的页码号超过了最大页码号，显示最后一页
+#             vids_list = page_robot.get_page(vids_list.num_pages)
+#         find = vids_list
+#         context['find'] = find
+#         context['query'] = query
+#         return render(request, 'web/index.html', context)
+#     else:
+#         return render(request, 'web/index.html')
+>>>>>>> change_model
