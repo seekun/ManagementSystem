@@ -1,5 +1,6 @@
 from mongoengine import *
 from mongoengine import connect
+# from django_auth_example.users.models import User
 
 connect('paper', host='127.0.0.1', port=27017)
 
@@ -18,7 +19,7 @@ class ArtiInFo(Document):
     JCR_sorts = ListField()
     JCR_partitions = ListField()
     body = StringField('摘要')
-    author_key_words = StringField('作者关键词')
+    author_key_words = ListField()
     Key_words_pluses = StringField('KeyWords Plus')
     KeyWords_Plus = StringField("KeyWords ")
     communication_author = StringField('通讯作者')
@@ -26,7 +27,7 @@ class ArtiInFo(Document):
     addresses = ListField()
     email = StringField('email')
     Fund_funded_institutions = StringField('基金资助机构')
-    Fund_funded_institutions_authorization_numbers = StringField('授权号')
+    Fund_funded_institutions_authorization_numbers = ListField()
     Fund_information = StringField('基金资助信息')
     Influence_factor = StringField('指定年份影响因子')
     Influence_factors_year = StringField('指定年份')
@@ -42,6 +43,23 @@ class ArtiInFo(Document):
     # 报错后处理的方式不对, 一开始直接贴google,没找到解决方法;后来开始尝试读文档, 开始读Django文档,后来意识到报错的是mongoengine, 卡了很长时间,通过和mongoengine文档的对比,找到了不同之处
     # 最后发现了问题所在. 反复测试,尝试, 是找bug的好办法
 
+    # belongs_to = Document.ManyToManyField(User)
     meta = {
         'collection': 'articles'
     }
+
+
+queryset_list = ArtiInFo.objects.all()
+print(queryset_list)
+print(queryset_list[3].authors)
+
+query = 'Liang, XZ'
+find_paper = []
+for i in queryset_list:
+    # print(i)
+    if query:
+        for author in i.authors:
+            if query in author:
+                find_paper.append(i)
+
+                print(i.authors)
