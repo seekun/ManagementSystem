@@ -1,9 +1,5 @@
 from mongoengine import *
 from mongoengine import connect
-<<<<<<< HEAD
-=======
-# from django_auth_example.users.models import User
->>>>>>> change_model
 
 connect('paper', host='127.0.0.1', port=27017)
 
@@ -50,22 +46,4 @@ class ArtiInFo(Document):
     meta = {
         'collection': 'articles'
     }
-<<<<<<< HEAD
-=======
 
-
-queryset_list = ArtiInFo.objects.all()
-print(queryset_list)
-print(queryset_list[3].authors)
-
-query = 'Liang, XZ'
-find_paper = []
-for i in queryset_list:
-    # print(i)
-    if query:
-        for author in i.authors:
-            if query in author:
-                find_paper.append(i)
-
-                print(i.authors)
->>>>>>> change_model

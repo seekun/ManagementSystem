@@ -5,7 +5,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def paper(request, query=None):
-<<<<<<< HEAD
+
     print(query)
     limit = 5
     queryset_list = ArtiInFo.objects.all()
@@ -15,7 +15,7 @@ def paper(request, query=None):
         if query:
             if query in i.author:
                 find_paper.append(i)
-=======
+
     context = {}
     if query:
         queryset_list = ArtiInFo.objects.all()
@@ -24,7 +24,7 @@ def paper(request, query=None):
             if query:
                 if query in i.title:
                     find.append(i)
->>>>>>> change_model
+
 
         # page_robot = Paginator(find, 5)
         # page = request.GET.get('page')
@@ -86,10 +86,7 @@ def profile(request):
         query = request.POST.get("q")
         return paper(request, query)
     # 开始的时候没有加return,直接调用paper视图函数,结果没有返回结果.
-<<<<<<< HEAD
 
-    return render(request, 'web/user_profile.html')
-=======
 
     return render(request, 'web/user_profile.html')
 
@@ -123,4 +120,4 @@ def profile(request):
 #         return render(request, 'web/index.html', context)
 #     else:
 #         return render(request, 'web/index.html')
->>>>>>> change_model
+
