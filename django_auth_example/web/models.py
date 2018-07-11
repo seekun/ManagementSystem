@@ -47,3 +47,8 @@ class ArtiInFo(Document):
         'collection': 'articles'
     }
 
+
+# queryset_list = ArtiInFo.objects.all()
+#
+# for i in queryset_list:
+#     print(i["id"])

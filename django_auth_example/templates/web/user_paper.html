@@ -33,40 +33,32 @@
           <thead>
             <tr>
                   <th>论文题目</th>
-                  <th>作者名单</th>
-                  <th>分区索引</th>
-                  <th>分区索引目录</th>
-                  <td>页</td>
-                  <th>发表期刊</th>
+                  <th>作者</th>
                   <th>卷</th>
                   <th>期</th>
-                  <th>发表日期</th>
-                  <th>信息是否正确</th>
+                  <td>出版年</td>
+{#                  <th>信息是否正确</th>#}
             </tr>
           </thead>
           <tbody>
           {%  for item in find %}
             <tr>
                  <td>{{ item.title }}</td>
-                 <td>{{ item.author }}</td>
-                 <td>{{ item.dol }}</td>
-                 <td>{{ item.dol_catalog }}</td>
-                 <td>{{ item.leaf }}</td>
-                 <td>{{ item.periodical }}</td>
-                 <td>{{ item.stage }}</td>
+                 <td>{{ item.authors }}</td>
                  <td>{{ item.volume }}</td>
+                 <td>{{ item.stage }}</td>
                  <td>{{ item.year}}</td>
-                 <td>
-                     {% if item.checkout %}
-                       <button class="ui positive basic button">
-                           正确
-                       </button>
-                     {% else %}
-                        <button class="ui negative button button">错误</button>
-                     {% endif %}
-                     <button class="ui toggle button">Vote</button>
-                     <!--{{ item.checkout }}-->
-                 </td>
+{#                 <td>#}
+{#                     {% if item.checkout %}#}
+{#                       <button class="ui positive basic button">#}
+{#                           正确#}
+{#                       </button>#}
+{#                     {% else %}#}
+{#                        <button class="ui negative button button">错误</button>#}
+{#                     {% endif %}#}
+{#                     <button class="ui toggle button">Vote</button>#}
+{#                     <!--{{ item.checkout }}-->#}
+{#                 </td>#}
             </tr>
           {% endfor %}
           </tbody>
@@ -88,7 +80,7 @@
           </tfoot>
         </table>
 
-        <div class="main-content-pagitor">
+          <div class="main-content-pagitor">
             {% if find.has_previous %}
                 <a href="?q={{ query }}&page={{ find.previous_page_number }}">< Pre </a>
             {% endif %}

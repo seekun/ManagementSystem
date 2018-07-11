@@ -36,118 +36,51 @@
           <input type="hidden" name="q"  value="{{ user.english_name }}"/>
         </form>
     </div>
-    <!--<div class="header">-->
-        <!--<img src="{% static 'images/blah.png' %}">-->
-        <!--<ul class="nav">-->
-            <!--<li><a href="#">Home</a></li>-->
-            <!--<li><a href="#">Site</a></li>-->
-            <!--<li><a href="#">Other</a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
+
     <div class="ui very padded segment">
         <h2>您的论文信息如下:</h2>
+    </div>
+    <div class="ui segment">
         <table class="ui table">
           <thead>
             <tr>
                   <th>论文题目</th>
-                  <th>作者名单</th>
-                  <th>分区索引</th>
-                  <th>分区索引目录</th>
-                  <td>页</td>
-                  <th>发表期刊</th>
+                  <th>作者</th>
                   <th>卷</th>
                   <th>期</th>
-                  <th>发表日期</th>
-                  <th>信息是否正确</th>
+                  <td>出版年</td>
+{#                  <th>信息是否正确</th>#}
             </tr>
           </thead>
           <tbody>
           {%  for item in find %}
             <tr>
-                 <td>{{ item.title }}</td>
-                 <td>{{ item.author }}</td>
-                 <td>{{ item.dol }}</td>
-                 <td>{{ item.dol_catalog }}</td>
-                 <td>{{ item.leaf }}</td>
-                 <td>{{ item.periodical }}</td>
-                 <td>{{ item.stage }}</td>
-                 <td>{{ item.volume }}</td>
-                 <td>{{ item.year}}</td>
                  <td>
-                     {% if item.checkout %}
-                       <button class="ui positive basic button" v-on:onclick="reverse">
-                           正确
-                       </button>
-                     {% else %}
-                        <button class="ui negative button button">错误</button>
-                     {% endif %}
-                     <!--{{ item.checkout }}-->
+                     <a href="{% url 'web:detail' item.id %}">{{ item.title }}</a>
                  </td>
+                 <td>{{ item.authors }}</td>
+                 <td>{{ item.volume }}</td>
+                 <td>{{ item.stage }}</td>
+                 <td>{{ item.year}}</td>
 
             </tr>
           {% endfor %}
           </tbody>
-          <tfoot class="full-width">
-            <tr>
 
-            </tr>
-          </tfoot>
         </table>
-                <div class="main-content-pagitor">
-                    {% if find.has_previous %}
-                        <a href="?page={{ find.previous_page_number }}">< Pre </a>
-                    {% endif %}
-                    <span> {{ find.number }} of {{ find.paginator.num_pages }} </span>
-                    {% if find.has_next %}
-                        <a href="?page={{ find.next_page_number }}">Next ></a>
-                    {% endif %}
-                </div>
 
+{#        <div class="main-content-pagitor">#}
+{#            {% if find.has_previous %}#}
+{#                <a href="?q={{ query }}&page={{ find.previous_page_number }}">< Pre </a>#}
+{#            {% endif %}#}
+{#            <span> {{ find.number }} of {{ find.paginator.num_pages }} </span>#}
+{#            {% if find.has_next %}#}
+{#                <a href="?q={{ query }}&page={{ find.next_page_number }}">Next ></a>#}
+{#            {% endif %}#}
+{#        </div>#}
     </div>
     <div class="footer">
-        <p>&copy;安徽大学论文管理系统</p>
+        <p>&copy; 安徽大学论文管理系统</p>
     </div>
-  <script>
-      semantic.button = {};
 
-// ready event
-semantic.button.ready = function() {
-
-  // selector cache
-  var
-    $buttons = $('.ui.buttons .button'),
-    $toggle  = $('.main .ui.toggle.button'),
-    $button  = $('.ui.button').not($buttons).not($toggle),
-    // alias
-    handler = {
-
-      activate: function() {
-        $(this)
-          .addClass('active')
-          .siblings()
-          .removeClass('active')
-        ;
-      }
-
-    }
-  ;
-
-  $buttons
-    .on('click', handler.activate)
-  ;
-
-
-  $toggle
-    .state({
-      text: {
-        inactive : 'Vote',
-        active   : 'Voted'
-      }
-    })
-  ;
-
-};
-  </script>
-
-</body>
 </html>
