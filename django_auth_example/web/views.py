@@ -88,35 +88,6 @@ def profile(request):
 
     return render(request, 'web/user_profile.html')
 
-# def mypaper(request):
-#     context = {}
-#     print(query)
-#     if query:
-#         queryset_list = ArtiInFo.objects.all()
-#         find = []
-#         for i in queryset_list:
-#             if query:
-#                 if query in i.title:
-#                     find.append(i)
-#
-#         page_robot = Paginator(find, 5)
-#         page = request.GET.get('page')
-#         vids_list = page_robot.get_page(page)
-#
-#         try:
-#             vids_list = page_robot.get_page(page)
-#         except PageNotAnInteger:
-#             # 如果用户请求的页码号不是整数，显示第一页
-#             vids_list = page_robot.get_page(1)
-#         except EmptyPage:
-#             # 如果用户请求的页码号超过了最大页码号，显示最后一页
-#             vids_list = page_robot.get_page(vids_list.num_pages)
-#         find = vids_list
-#         context['find'] = find
-#         context['query'] = query
-#         return render(request, 'web/index.html', context)
-#     else:
-#         return render(request, 'web/index.html')
 
 
 def detail(request, page_num):
