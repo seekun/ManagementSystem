@@ -1,10 +1,8 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
-from .models import User
 
 
 def index(request):
-
     return render(request, 'index.html')
 
 
@@ -40,3 +38,9 @@ def register(request):
 
 def profile(request):
     return render(request, 'users/user_profile.html')
+
+#
+# def change(request):
+#     if request.method == POST
+#
+#     return
