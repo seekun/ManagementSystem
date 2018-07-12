@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm, UserForm
-from .models import User
+
 
 
 def index(request):

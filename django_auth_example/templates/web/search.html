@@ -16,9 +16,21 @@
    <div class="ui center very padded segment">
         <form action="" method="GET">
          <!--{% csrf_token %}-->
-          <input type="text" name="q" placeholder="输入要查询的论文题目"/>
-          <input type="submit"  value="Search">
-    </form>
+              <input type="text" name="q" placeholder="输入要查的关键字"/>
+    {#            <input type="text" name="select" >#}
+                <br>
+
+              <input type="radio" name="gender" value="title" checked> 题目<br>
+              <input type="radio" name="gender" value="authors"> 作者<br>
+              <input type="radio" name="gender" value="Key_words_pluses"> 关键字<br>
+              <input type="submit"  value="Search">
+
+        </form>
    </div>
+
+
+
+
+
 </body>
 </html>

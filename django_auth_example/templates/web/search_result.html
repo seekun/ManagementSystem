@@ -11,12 +11,12 @@
 </head>
 <body>
 
-    <div class="ui center very padded segment">
-        <form action="" method="GET">
-             <!--{% csrf_token %}-->
-          <input type="text" name="q" placeholder="输入要查询的论文"/>
-          <input type="submit"  value="Search">
-    </form>
+{#    <div class="ui center very padded segment">#}
+{#        <form action="" method="GET">#}
+{#             <!--{% csrf_token %}-->#}
+{#          <input type="text" name="q" placeholder="输入要查询的论文"/>#}
+{#          <input type="submit"  value="Search">#}
+{#    </form>#}
     </div>
 
     <div class="ui segment">
@@ -59,11 +59,11 @@
 
         <div class="main-content-pagitor">
             {% if find.has_previous %}
-                <a href="?q={{ query }}&page={{ find.previous_page_number }}">< Pre </a>
+                <a href="?q={{ query }}&gender={{ select }}&page={{ find.previous_page_number }}">< Pre </a>
             {% endif %}
             <span> {{ find.number }} of {{ find.paginator.num_pages }} </span>
             {% if find.has_next %}
-                <a href="?q={{ query }}&page={{ find.next_page_number }}">Next ></a>
+                <a href="?q={{ query }}&gender={{ select }}&page={{ find.next_page_number }}">Next ></a>
             {% endif %}
         </div>
     </div>
