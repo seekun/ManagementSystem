@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from .forms import RegisterForm
+from .forms import RegisterForm, UserForm
+from .models import User
 
 
 def index(request):
@@ -37,10 +38,37 @@ def register(request):
 
 
 def profile(request):
-    return render(request, 'users/user_profile.html')
+    return render(request, 'web/user_profile.html')
 
-#
-# def change(request):
-#     if request.method == POST
-#
-#     return
+
+def edit_profile(request):
+    # try:
+    #     profile = request.users_user.username
+    # except User.DoesNotExist:
+    #     profile = User()
+    # instance = get_object_or_404(User, user_number=user_number)
+    # form = UserForm(request.POST or None, instance=instance)
+    if request.method == 'GET':
+        form = UserForm(instance=request.user)
+        # form = UserForm()
+    if request.method == 'POST':
+        form = UserForm(request.POST, instance=request.user)
+        if form.is_valid():
+            # user_number = form.cleaned_data['user_number']
+            # chinese_name = form.cleaned_data['chinese_name']
+            # english_name = form.cleaned_data['english_name']
+            # department = form.cleaned_data['department']
+            #
+            # new_profile = User(user_number=user_number, chinese_name=chinese_name, english_name=english_name,
+            #                    department=department)
+            # 需要加表单校验, 工号不能重复
+            form.save()
+
+            return redirect(to='/web/profile/')
+
+    # context = {}
+    # user_list = User.objects.all()
+    # context['user_list'] = user_list
+    # context['form'] = form
+    context = {'form': form}
+    return render(request, 'web/change.html', context)
