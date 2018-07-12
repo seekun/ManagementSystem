@@ -89,7 +89,6 @@ def profile(request):
     return render(request, 'web/user_profile.html')
 
 
-
 def detail(request, page_num):
     context = {}
     paper_detail = None
@@ -101,4 +100,3 @@ def detail(request, page_num):
     context['p'] = p
 
     return render(request, 'web/detail.html', context)
-

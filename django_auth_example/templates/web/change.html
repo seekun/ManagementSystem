@@ -5,6 +5,20 @@
     <title>完善个性信息</title>
 </head>
 <body>
-
+   <form method="post">
+        {% csrf_token %}
+{#        {{ form.as_p }}#}
+        {% for field in form %}
+            {% if field.label == '密码' %}
+                <div></div>
+            {% else %}
+                <div>
+                    {{ field.label }}
+                    {{ field }}
+                </div>
+            {% endif %}
+       {% endfor %}
+    <button type="submit">Submit</button>
+   </form>
 </body>
 </html>
