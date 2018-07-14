@@ -7,7 +7,7 @@ import json
 class User(AbstractUser):
     user_number = models.CharField('工号', max_length=20, blank=True)
     chinese_name = models.CharField('中文名', max_length=20, blank=True)
-    english_name = JSONField(null=True, blank=True, default=None)
+    english_name = JSONField('论文署名', null=True, blank=True, default=None)
     # list字段,可以有多个english_name
     department = models.CharField('所在院系名称', max_length=20, blank=True)
 

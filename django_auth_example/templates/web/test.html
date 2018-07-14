@@ -1,12 +1,8 @@
-
-{% extends 'web/base.html' %}
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Paper detail</title>
-     <!-- Latest compiled and minified CSS -->
+      <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
         <!-- jQuery library -->
@@ -17,8 +13,19 @@
         <link rel="stylesheet" href="{% static 'css/my.css' %}">
 </head>
 <body>
-{% block content %}
-    {{ p.title }}
-{% endblock %}
+    <input id="tl" type="text"/>
+    <input id="al" type="button" value="添加论文署名"/>
+
+    <ol id="ul">
+    </ol>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('#al').click(function(){
+            var v = $('#tl').val();
+
+            var tmp = "<li>"+v+"</li>";
+            $('#ul').append(tmp);
+        })
+    </script>
 </body>
 </html>

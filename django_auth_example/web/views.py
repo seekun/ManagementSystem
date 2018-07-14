@@ -13,8 +13,8 @@ def paper(request, query=None):
     find_paper = []
     for i in queryset_list:
         if query:
-            for author in i.authors:
-                if query in author:
+            for a in i.author:
+                if query in a:
                     find_paper.append(i)
 
     context = {}
@@ -41,13 +41,14 @@ def paper(request, query=None):
         # find = vids_list
         context['find'] = find
         context['query'] = query
-        return render(request, 'web/index.html', context)
+        # context['select'] = select
+        return render(request, 'web/search_user_paper.html', context)
     else:
-        return render(request, 'web/index.html')
+        return render(request, 'web/search_user_paper.html')
 
 
 def index(request):
-    return render(request, 'web/index.html')
+    return render(request, 'web/search_user_paper.html')
 
 
 # 对于不同的筛选条件, 可以根据情况设置fuzz值, 和fuzz筛选的方法 https://stackoverflow.com/questions/10383044/fuzzy-string-comparison
@@ -55,8 +56,8 @@ def search(request):
     context = {}
     query = request.GET.get("q")
     select = request.GET.get("gender")
-    if select == 'title':
-        if query:
+    if query:
+        if select == 'title':
             queryset_list = ArtiInFo.objects.all()
             find = []
             relate = {}
@@ -87,15 +88,14 @@ def search(request):
             context['query'] = query
             context['select'] = select
             return render(request, 'web/search_result.html', context)
-    elif select == 'authors':
-        if query:
+        elif select == 'author':
             queryset_list = ArtiInFo.objects.all()
             find = []
             relate = {}
             for i in queryset_list:
                 if query:
-                    for author in i.authors:
-                        fuzz_number = fuzz.partial_ratio(query, author)
+                    for a in i.author:
+                        fuzz_number = fuzz.partial_ratio(query, a)
                         if fuzz_number >= 80:
                             relate[i.id] = fuzz_number
             sorted_relate = sorted(relate.items(), key=lambda kv: kv[1])
@@ -119,21 +119,18 @@ def search(request):
             find = vids_list
             context['find'] = find
             context['query'] = query
+            context['select'] = select
             return render(request, 'web/search_result.html', context)
-    elif select == 'Key_words_pluses':
-        if query:
+        elif select == 'KeyWords_Plus':
             queryset_list = ArtiInFo.objects.all()
             find = []
-            # for i in queryset_list:
-            #     if query:
-            #         if query in i.Key_words_pluses:
-            #             find.append(i)
             relate = {}
             for i in queryset_list:
                 if query:
-                    fuzz_number = fuzz.token_set_ratio(query, i.Key_words_pluses)
-                    if fuzz_number >= 90:
-                        relate[i.id] = fuzz_number
+                    for a in i.KeyWords_Plus:
+                        fuzz_number = fuzz.partial_ratio(query, a)
+                        if fuzz_number >= 80:
+                            relate[i.id] = fuzz_number
             sorted_relate = sorted(relate.items(), key=lambda kv: kv[1])
             for i in sorted_relate:
                 for j in queryset_list:
@@ -154,6 +151,7 @@ def search(request):
             find = vids_list
             context['find'] = find
             context['query'] = query
+            context['select'] = select
             return render(request, 'web/search_result.html', context)
     else:
         return render(request, 'web/search.html')
@@ -179,3 +177,11 @@ def detail(request, page_num):
     context['p'] = p
 
     return render(request, 'web/detail.html', context)
+
+
+def introduce(request):
+    return render(request, 'web/introduce.html')
+
+
+def contact(request):
+    return render(request, 'web/contact.html')

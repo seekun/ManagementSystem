@@ -1,24 +1,71 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>完善个性信息</title>
+     <!-- Latest compiled and minified CSS -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/my.css' %}">
+
 </head>
 <body>
-   <form method="post">
-        {% csrf_token %}
-{#        {{ form.as_p }}#}
-        {% for field in form %}
-            {% if field.label == '密码' %}
-                <div></div>
-            {% else %}
-                <div>
-                    {{ field.label }}
-                    {{ field }}
-                </div>
-            {% endif %}
-       {% endfor %}
-    <button type="submit">Submit</button>
-   </form>
+{% block content %}
+<div class="col-md-6 col-centered">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                修改个人信息
+            </h3>
+        </div>
+        <div>
+            <div class="panel-body">
+                <form method="post">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.label == '密码' %}
+                            <div></div>
+                        {% elif field.label == '论文署名' %}
+                            <input id="tl" type="text"/>
+                            <input id="al" type="button" value="添加论文署名"/>
+                            <ol id="ul"></ol>
+                            <script>
+                                $('#al').click(function () {
+                                    var v = $('#tl').val();
+
+                                    var tmp = "<li>" + v + "</li>";
+                                    $('#ul').append(tmp);
+                                })
+                                alert(v)
+                            </script>
+                        {% else %}
+                            <div>
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
+                                {{ field }}
+
+
+                              <span class="input-group-addon" id="basic-addon2"> {{ field.label }}</span>
+                            </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <br>
+                    <button type="submit"  type="button" class="btn-info btn-lg">提交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
 </body>
 </html>

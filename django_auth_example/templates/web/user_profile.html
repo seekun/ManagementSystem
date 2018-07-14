@@ -1,48 +1,78 @@
+
+{% extends 'web/base.html' %}
 {% load static %}
 <html lang="en">
 <head>
-     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/my.css' %}">
 </head>
 <body>
-<div class="ui center segment">
-    <h2>你已登录，欢迎你：<a href="#">{{ user.english_name }}</a></h2>
-    <a href="/users/edit_profile">完善您的个人信息</a>
-    <table class="ui table">
-        <thead>
-        <tr>
-            <th>用户名</th>
-            <th>所属院系</th>
-            <th>论文署名</th>
-            <th>工号</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>{{ user.username }}</td>
-            <td>{{ user.department }}</td>
-            <td>{{ user.english_name}}</td>
-            <td>{{ user.user_number }}</td>
-        </tr>
-        </tbody>
-        <tfoot class="full-width">
-        <tr>
-            <div class="ui  inverted blue button">
-                <form action="" method="POST">
+{% block content %}
+    <div class="col-md-8 col-centered">
+
+        <div class="page-header">
+          <h1>
+              <h3 class="panel-title">你已登录，欢迎你：
+                {{ user.username }}
+
+            </h3>
+              <br>
+              <a href="/users/edit_profile" class="alert alert-success">完善个人信息</a>
+              <br>
+              <br>
+            <form action="" method="POST">
                 {% csrf_token %}
-                <input type="hidden" name="q"  value="{{ user.english_name }}"/>
-                <input type="submit"  value="查看您的论文信息">
-                </form>
-            </div>
-        </tr>
-        </tfoot>
-    </table>
+                <input type="hidden" name="q" value="{{ user.english_name }}"/>
+                <input class="alert alert-info" type="submit" value="查看您的论文信息">
+            </form>
+          </h1>
+        </div>
+        <div class="panel panel-default">
+        <div class="panel-heading">
+
+        </div>
+        <div class="panel-body">
+
+
+            <div class="panel panel-default">
+              <!-- Default panel contents -->
+              <div class="panel-heading">
+                  <button class=" btn-primary btn-lg">个人信息</button>
+              </div>
+
+              <!-- Table -->
+              <table class="table">
+                    <table class="ui table">
+                        <thead>
+                        <tr>
+                            <th class="btn-info">用户名</th>
+                            <th class="btn-info">所属院系</th>
+                            <th class="btn-info">论文署名</th>
+                            <th class="btn-info">工号</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.department }}</td>
+                            <td>{{ user.english_name }}</td>
+                            <td>{{ user.user_number }}</td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+              </table>
 </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
 </body>
 </html>
