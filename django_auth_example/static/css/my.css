@@ -1,0 +1,102 @@
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.ahu_logo {
+    width: 500px;
+    margin: auto;
+}
+
+footer {
+    background-color: #283f50;
+
+}
+
+.footer_font {
+    color: #393041;
+}
+
+header {
+    background-color: #fcfffa;
+    background-size: contain;
+
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fcfffa;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo {
+    position: relative;
+    top: -35%;
+}
+
+.search {
+    margin-left: 100px;
+    margin-top: 3px;
+}
+
+.login_register {
+    position: absolute;
+    margin: -46px 0px 0px 1250px;
+}
+
+.destroy_login {
+    margin: 0px 0 0 -50px;
+}
+
+/*.bg {*/
+/*background: url("/static/images/back.jpg") no-repeat center center fixed;*/
+/*background-size: cover;*/
+/*position: fixed;*/
+/*height: 100%;*/
+/*width: 100%;*/
+/*z-index: 0;*/
+/*}*/
+
+/*.site-bg-overlay {*/
+/*position: fixed;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*top: 0;*/
+/*left: 0;*/
+/*z-index: 1;*/
+/*background: rgba(92, 180, 142, 0.4);*/
+/*}*/
+
+/*.site-bg {*/
+    /*position: fixed;*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*z-index: 0;*/
+    /*!*background-image: url("/static/images/back.jpg");*!*/
+    /*background-image: url("/static/images/back.jpg");*/
+    /*background-size: cover;*/
+
+    /*!*background-size: cover;*!*/
+    /*!*background-repeat: no-repeat;*!*/
+    /*!*background-attachment: fixed;*!*/
+/*}*/
+
+/*.site-bg-overlay {*/
+    /*position: fixed;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*z-index: 1;*/
+    /*background: rgba(92, 180, 142, 0.4);*/
+/*}*/
+
+.link_font {
+    color: #335d8a;
+
+}

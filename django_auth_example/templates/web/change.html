@@ -1,24 +1,63 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>完善个性信息</title>
+     <!-- Latest compiled and minified CSS -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/my.css' %}">
+
 </head>
 <body>
-   <form method="post">
-        {% csrf_token %}
-{#        {{ form.as_p }}#}
-        {% for field in form %}
-            {% if field.label == '密码' %}
-                <div></div>
-            {% else %}
-                <div>
-                    {{ field.label }}
-                    {{ field }}
-                </div>
-            {% endif %}
-       {% endfor %}
-    <button type="submit">Submit</button>
-   </form>
+{% block content %}
+<div class="col-md-8 col-centered">
+     <div class="alert alert-warning" role="alert">论文署名可以为空.</div>
+<div class="alert alert-warning" role="alert">请按照此格式填写署名  eg. Zhang, Xiao</div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                修改个人信息
+            </h3>
+        </div>
+
+        <div>
+            <div class="panel-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <table border="1">
+                        {% for field in form %}
+                        {% if field.label == '密码' %}
+                            <div></div>
+                        {% elif field.label == '论文署名' %}
+                                {{ field }}
+                                {{ field.label }}
+                        {% else %}
+                            <div>
+                                {{ field }}
+                                {{ field.label }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+
+                    </table>
+                    <br>
+                    <button type="submit"  type="button" class="btn-info btn-lg">提交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
 </body>
 </html>

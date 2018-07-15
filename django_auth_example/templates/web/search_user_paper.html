@@ -1,0 +1,59 @@
+
+{% extends 'web/base.html' %}
+{% load static %}
+<html>
+<head>
+   <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/my.css' %}">
+
+</head>
+<body id="app">
+{% block content %}
+    <div class="col-md-10 col-centered">
+        <div class="panel panel-default">
+            <div class="panel-title">
+                <button class=" btn-primary btn-lg">您的论文信息如下:</button>
+            </div>
+            <div class="panel-body">
+                <table class="ui table">
+                  <thead>
+                    <tr>
+                          <th class="btn-info">论文题目</th>
+                          <th class="btn-info">作者</th>
+                          <th class="btn-info">卷</th>
+                          <th class="btn-info">期</th>
+                          <td class="btn-info">出版年</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {%  for item in find %}
+                    <tr>
+                         <td>
+                             <a href="{% url 'web:detail' item.id %}">{{ item.title }}</a>
+                         </td>
+                         <td>{{ item.author }}</td>
+                         <td>{{ item.volume }}</td>
+                         <td>{{ item.stage }}</td>
+                         <td>{{ item.year}}</td>
+
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+</body>
+</html>

@@ -1,6 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from .forms import RegisterForm, UserForm
-
+from django.http import HttpResponse
+import json
+from django.template import RequestContext
 
 
 def index(request):
@@ -62,6 +64,8 @@ def edit_profile(request):
             # new_profile = User(user_number=user_number, chinese_name=chinese_name, english_name=english_name,
             #                    department=department)
             # 需要加表单校验, 工号不能重复
+            # english_name = {'a': 1, 'b': 2}
+            # form.english_name = json.dumps(english_name)
             form.save()
 
             return redirect(to='/web/profile/')

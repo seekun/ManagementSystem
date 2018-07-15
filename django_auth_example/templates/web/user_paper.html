@@ -1,22 +1,28 @@
+
+{% extends 'web/base.html' %}
 {% load static %}
 <html>
 <head>
-     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/my.css' %}">
 </head>
 <body>
-
+{% block content %}
     <div class="ui center segment">
-         <h2>你已登录，欢迎你：<a href="#">{{ user.chinese_name }}</a></h2>
+         <h2>你已登录，欢迎你：<a href="#">{{ user.username }}</a></h2>
          <form action="" method="GET">
          {% csrf_token %}
           <input type="hidden" name="q"  value="{{ user.english_name }}"/>
+          <input type="hidden" name="q2"  value="{{ user.english_name2 }}"/>
+          <input type="hidden" name="q3"  value="{{ user.english_name3 }}"/>
+          <input type="hidden" name="q4"  value="{{ user.english_name4 }}"/>
           <input type="submit"  value="查看您的论文信息">
         </form>
     </div>
@@ -36,7 +42,7 @@
           {%  for item in find %}
             <tr>
                  <td>{{ item.title }}</td>
-                 <td>{{ item.authors }}</td>
+                 <td>{{ item.author }}</td>
                  <td>{{ item.volume }}</td>
                  <td>{{ item.stage }}</td>
                  <td>{{ item.year}}</td>
@@ -53,23 +59,6 @@
 {#                 </td>#}
             </tr>
           {% endfor %}
-          </tbody>
-          <tfoot class="full-width">
-            <tr>
-              <th></th>
-              <th colspan="4">
-                <div class="ui right floated small primary labeled icon button">
-                  <i class="user icon"></i> Add User
-                </div>
-                <div class="ui small button">
-                  Approve
-                </div>
-                <div class="ui small  disabled button">
-                  Approve All
-                </div>
-              </th>
-            </tr>
-          </tfoot>
         </table>
 
           <div class="main-content-pagitor">
@@ -85,6 +74,6 @@
     <div class="footer">
         <p>&copy;安徽大学论文管理系统</p>
     </div>
-
+{% endblock %}
 </body>
 </html>
