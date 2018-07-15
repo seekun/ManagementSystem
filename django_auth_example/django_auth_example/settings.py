@@ -140,18 +140,3 @@ connect('paper', host='127.0.0.1', port=27017)
 STATIC_URL = '/static/'
 MEDIA_URL = '/upload/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'upload').replace("//", "/")
-
-<<<<<<< HEAD
-=======
-JSON_EDITOR_JS = 'https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/4.2.1/jsoneditor.js'
-JSON_EDITOR_CSS = 'https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/4.2.1/jsoneditor.css'
-
-#
-# from django.contrib.postgres.fields import JSONField
-# from
-#
-# class JsonAdmin(admin.ModelAdmin):
-#     formfield_overrides = {
-#         JSONField: {'widget': PrettyJSONWidget}
-#     }
->>>>>>> english_name
