@@ -1,6 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from .forms import RegisterForm, UserForm
+from django.http import HttpResponse
 import json
+from django.template import RequestContext
 
 
 def index(request):

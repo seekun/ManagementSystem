@@ -20,6 +20,9 @@
          <form action="" method="GET">
          {% csrf_token %}
           <input type="hidden" name="q"  value="{{ user.english_name }}"/>
+          <input type="hidden" name="q2"  value="{{ user.english_name2 }}"/>
+          <input type="hidden" name="q3"  value="{{ user.english_name3 }}"/>
+          <input type="hidden" name="q4"  value="{{ user.english_name4 }}"/>
           <input type="submit"  value="查看您的论文信息">
         </form>
     </div>

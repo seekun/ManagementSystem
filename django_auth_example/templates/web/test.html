@@ -1,31 +1,47 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-      <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="{% static 'css/my.css' %}">
-</head>
-<body>
-    <input id="tl" type="text"/>
-    <input id="al" type="button" value="添加论文署名"/>
-
-    <ol id="ul">
-    </ol>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        $('#al').click(function(){
-            var v = $('#tl').val();
-
-            var tmp = "<li>"+v+"</li>";
-            $('#ul').append(tmp);
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#e2").show()
+            })
         })
+
+        oggle_visibility('id_of_element_to_toggle');
+
+        function toggle_visibility(id) {
+           var e = document.getElementById(id);
+           if(e.style.display == 'block')
+              e.style.display = 'none';
+           else
+              e.style.display = 'block';
+        }
     </script>
+</head>
+<body>
+<form action="/action_page.php">
+    english1<br>
+    <input type="text" name="english_name1" value="english_name1" id="e1">
+    <br>
+    <span style="display:none;" class="toshow">
+         english2<br>
+        <input type="text" name="english_name1" value="english_name1" id="e2"  >
+    </span>
+
+    <br><br>
+    <button id="btn">add english name</button>
+    <input type="submit" value="Submit">
+</form>
+<ol>
+    <li></li>
+</ol>
+
+<p>If you click on me,I will disapper</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+<button>Click me to hide paragraphs</button>
 </body>
 </html>

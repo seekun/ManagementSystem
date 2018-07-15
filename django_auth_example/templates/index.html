@@ -12,14 +12,28 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 {% block content %}
-<body class="bg">
-
+<body>
+    <div class="site-bg"></div>
+    <div class="site-bg-overlay"></div>
 <div>
     <div class="flex-center">
         <div class="container">
+            <div class="col-md-4 col-centered">
+                    <form action="" method="GET" class="btn-lg">
+                          <input type="text" name="q" placeholder="输入要查的关键字"/>
+                            <br>
+                          <input type="radio" name="gender" value="title" checked> 标题<br>
+                          <input type="radio" name="gender" value="author"> 作者<br>
+                          <input type="radio" name="gender" value="KeyWords_Plus"> 关键字<br>
+                          <input type="radio" name="gender" value="periodical">出版物名称<br>
+                          <input type="radio" name="gender" value="DOI"> DOI<br>
+                          <input type="radio" name="gender" value="year">出版年<br>
+                          <input type="submit" class="btn-primary" value="搜索">
+                    </form>
+              </div>
         </div>
     </div>
-</div>
+
 
 </body>
 {% endblock %}
