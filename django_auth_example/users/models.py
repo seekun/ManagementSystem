@@ -1,10 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from jsonfield import JSONField
-from prettyjson import PrettyJSONWidget
-# from jsonfield import JSONField
-from jsoneditor.forms import JSONEditor
-# from jsoneditor.fields.django_json_field import JSONField
+
 
 class User(AbstractUser):
     user_number = models.CharField('工号', max_length=20, blank=True)
@@ -18,7 +14,3 @@ class User(AbstractUser):
 
     class Meta(AbstractUser.Meta):
         pass
-
-
-class TestModel(models.Model):
-    my_field = JSONField()
