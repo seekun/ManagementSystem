@@ -31,7 +31,7 @@
             <div class="login_register">
                 {% if user.is_authenticated %}
                      <div class="destroy_login">
-                         <a href="web/profile">
+                         <a href="{% url 'web:profile'%}">
                             <button class="btn-danger btn-lg">
                                 {{ user.username }}的主页
                             </button>
