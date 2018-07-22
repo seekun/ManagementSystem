@@ -1,0 +1,139 @@
+{% extends 'web/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Detail{% endblock %}</title>
+     <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/my.css' %}">
+</head>
+<body>
+{% block content %}
+    <div class="container">
+        <div class="Papertitle">
+            <b>{{ p.title }}</b>
+        </div>
+        <div class="Paperauthor">
+            <h5><b>Author list:</b></h5>
+            {% for ij in mylist %}
+            <author>{{ ij.0 }}</author>
+            <sup>{{ ij.1 }}</sup>
+            ;
+            {% endfor %}
+        </div>
+        <div class="field">
+            <span class="labele">Periodical:</span>
+            <value>{{ p.periodical }}</value>
+        </div>
+        <div class="field">
+            <span class="labele">Volume:</span>
+            <value>{{ p.volume }}</value>
+            <span class="labele">Pages:</span>
+            <value>{{ p.page }}</value>
+        </div>
+        <div class="field">
+            <span class="labele">DOI:</span>
+            <value>{{ p.DOI }}</value>
+        </div>
+        <div class="field">
+            <span class="labele">Pubished:</span>
+            <value>{{ p.year }}</value>
+        </div>
+
+        <div class="abstract">
+            <h4><b>Abstract:</b></h4>
+            {{ p.body }}
+        </div>
+        <div class="keyword">
+            <h4><b>Keywords</b></h4>
+            <basic>
+                <h5><b>Author Keywords:</b>
+                {% for a in p.author_key_word %}
+                {{ a }} {% endfor %}
+                </h5>
+            </basic>
+            <basic>
+                <h5><b>Keywords Plus:</b>
+                {% for k in p.author_key_word %}
+                {{ k }} {% endfor %}
+                </h5>
+            </basic>
+        </div>
+        <div class="Authorinformation">
+            <h4><b>Author information</b></h4>
+            <basic>
+                <h5><b>Reprint Address:</b>
+                    {{ p.reprint_author }}
+                </h5>
+                {{ p.reprint_author_address }}
+            </basic>
+            <basic>
+                <h5><b>Address:</b></h5>
+                {% for a in p.address %}
+                <h5>
+                    {{ a }}
+                </h5>
+                {% endfor %}
+            </basic>
+            <basic>
+                <h5>{{ p.email }}</h5>
+            </basic>
+        </div>
+        <table class="table table-bordered table-straiped table-hover">
+            <h4><b>Funding</b></h4>
+            <tr><th><b>Funding Agency</b></th><th><b>Grant Number</b></th></tr>
+            {% for ij in Funding %}
+            <tr><td>{{ ij.0 }}</td><td>{{ ij.1 }}</td></tr>
+            {% endfor %}
+        </table>
+        <basic>
+            <h5><b>Funding text</b></h5>
+            <p class="Funding">
+                {{ p.Fund_information }}
+            </p>
+        </basic>
+
+        <div>
+           <div class="Periodical">
+                <span class="SourceTitle"><b>{{ p.periodical }}</b></span>
+                <p class="field"><b>Impact Factor</b></p>
+                <table cellspacing="0" cellpadding="0" border="0" class="Impact_Factor_table">
+                    <tr><th><b>{{ p.Influence_factor }}</b></th><th><b>{{ p.Influence_factor }}</b></th></tr>
+                    <tr><td>{{ p.Influence_factors_year }}</td><td>{{ p.Influence_factors_years }}</td></tr>
+                </table>
+                <table cellspacing="0" cellpadding="0" border="0" class="JCR_Category_table">
+                    <tr><th>JCR<span class="RegMark">@</span>Category</th><th>Rank in Category</th><th>Quartile in Category</th></tr>
+                    {% for ijk in JCR %}
+                    <tr><td>{{ ijk.0 }}</td><td>{{ ijk.1 }}</td><td>{{ ijk.2 }}</td></tr>
+                    {% endfor %}
+                </table>
+                <p class="field">
+                    <span class="labele">ISSN</span>
+                    <value>{{ p.ISSN }}</value>
+                    <br>
+                    <span class="labele">eISSN</span>
+                    <value>{{ p.eISSN }}</value>
+                </p>
+                <p class="field">
+                    <span class="labele">Research Domain</span>
+                    <value>{{ p.Research_fields }}</value>
+                </p>
+            </div>
+        </div>
+
+        <a style="cursor:pointer;margin-left:18px;padding: 2px;border-radius:3px;font-size:larger;font-weight:bold;line-height:30px;" onclick="expandCollapseRecord('hidden_section_label',                   'See more data fields', 'See fewer data fields',                   'hidden_section',                   'UA_options_input_form', 'isRecordExpanded')" id="hidden_section_label" tabindex="0">See more data fields</a>
+
+
+
+    </div>
+{% endblock %}
+</body>
+</html>

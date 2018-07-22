@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/my.css' %}">
+
+</head>
+<body>
+
+
+                   <div id="select2">
+                        <fieldset class="col-md-offset-2 col-md-6">
+                            <input name="q2" type="text" class="text"  placeholder="您要搜索的内容">
+                        </fieldset>
+                        <div class="input-group-btn">
+                            <select name="gender2" id="selectid" class="btn-info btn-lg" onchange="submitForm();">
+                                     <option value="title">标题</option>
+                                     <option value="author">作者</option>
+                                     <option value="KeyWords_Plus">关键字</option>
+                                     <option value="periodical">出版物名称</option>
+                                     <option value="DOI">DOI</option>
+                                     <option value="year">出版年</option>
+                             </select>
+                          </div><!-- /btn-group -->
+
+                  </div>
+                  <div id="add_button">
+                        <button>add</button>
+                  </div>
+
+
+<script>
+
+      $("#select2").hide();
+
+    $("#add_button").click(function() {
+      $("#select2").show();
+    })
+</script>
+</body>
+</html>

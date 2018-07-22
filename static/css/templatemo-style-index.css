@@ -1,0 +1,513 @@
+@font-face {
+  font-family: 'robotolight';
+  src: url("../fonts/Roboto-Light-webfont.eot");
+  src: url("../fonts/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light-webfont.woff") format("woff"), url("../fonts/Roboto-Light-webfont.ttf") format("truetype"), url("../fonts/Roboto-Light-webfont.svg#robotolight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotoregular';
+  src: url("../fonts/Roboto-Regular-webfont.eot");
+  src: url("../fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular-webfont.woff") format("woff"), url("../fonts/Roboto-Regular-webfont.ttf") format("truetype"), url("../fonts/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotobold';
+  src: url("../fonts/Roboto-Bold-webfont.eot");
+  src: url("../fonts/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold-webfont.woff") format("woff"), url("../fonts/Roboto-Bold-webfont.ttf") format("truetype"), url("../fonts/Roboto-Bold-webfont.svg#robotobold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.green {
+	color: #9F3;
+}
+
+.orange {
+	color: #FC0;
+}
+
+.blue {
+	color: #06C;
+}
+
+/*---------------------------------------------------------
+ Reset
+-------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+audio:not([controls]) {
+  display: none;
+}
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+button,
+input {
+  line-height: normal;
+  *overflow: visible;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]:-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/*---------------------------------------------------------
+Basic Style
+-------------------------------------------------------- */
+body {
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  font-family: 'robotolight';
+}
+
+a {
+  color: #5cb48e;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  text-decoration: none !important;
+}
+a:hover {
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #333333;
+}
+
+::-webkit-input-placeholder {
+  color: #666;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #666;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #666;
+}
+
+:-ms-input-placeholder {
+  color: #666;
+}
+
+.site-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background-image: url(../images/backgroud.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.site-bg-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(92, 180, 142, 0.4);
+}
+
+#page-content {
+  position: relative;
+  z-index: 12;
+  margin-top: 40px;
+}
+@media screen and (max-width: 992px) {
+  #page-content {
+    margin-top: 0;
+  }
+}
+
+.content {
+  display: none;
+}
+
+.box-content {
+  background: white;
+  color: #555;
+  font-family: 'robotolight';
+  padding: 40px;
+  margin-top: 30px;
+}
+.box-content .widget-title {
+  font-size: 22px;
+  color: #333;
+  font-family: 'robotolight';
+  margin-bottom: 30px;
+}
+
+.welcome-text {
+  position: relative;
+  margin-top: 60px;
+}
+.welcome-text h2 {
+  font-size: 46px;
+  font-family: 'robotolight';
+  margin-bottom: 30px;
+  color: white;
+}
+.welcome-text p {
+  font-size: 18px;
+  font-family: 'robotolight';
+}
+
+.search-form {
+  margin-top: 80px;
+}
+.search-form input.text {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: 0;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  width: 100%;
+  display: inline-block;
+  font-size: 14px;
+}
+.search-form input.button {
+  background: #7DB9FF; /* #5cb48e */
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 20px;
+  outline: 0;
+  border: 0;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.search-form .button-holder {
+  text-align: left;
+}
+@media screen and (max-width: 992px) {
+  .search-form .button-holder {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+.search-form p {
+  margin-top: 20px;
+  font-size: 12px;
+}
+.search-form ::-webkit-input-placeholder {
+  color: #fff;
+}
+.search-form :-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+}
+.search-form ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+}
+.search-form :-ms-input-placeholder {
+  color: #fff;
+}
+
+
+
+
+
+
+
+#nav a {
+  display: block;
+  width: 170px;
+  height: 170px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  margin: 0 auto;
+}
+#nav li {
+  margin-bottom: 30px;
+}
+#nav i {
+  padding-top: 50px;
+  display: block;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.homebutton {
+  background: #207d59;
+}
+
+.registerbutton {
+  background: #3b5b8e;
+}
+
+.loginbutton {
+  background: #5c9faf;
+}
+
+.contactbutton {
+  background: #b85b53;
+}
+
+.logo-top-margin {
+  position: relative;
+  weight: 20px;
+  height: 20px;
+  margin-top: 120px;
+  margin-left: 35%;
+}
+@media screen and (max-width: 992px) {
+  .logo-top-margin {
+    margin-top: 0!important;
+    margin-left: 0!important;
+  }
+}
+
+.responsive-menu {
+  position: relative;
+  text-align: center;
+  z-index: 99;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.toggle-menu {
+  color: white !important;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-family: 'robotoregular';
+  display: inline-block;
+}
+.toggle-menu i {
+  margin-right: 15px;
+}
+
+
+@media screen and (max-width: 992px) {
+  .logo-holder {
+    text-align: center;
+  }
+}
+
+/*---------------------------------------------------------
+Register
+-------------------------------------------------------- */
+
+.register-form input, .register-form textarea {
+  width: 100%;
+  outline: 0;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  border: 1px solid #dddddd;
+}
+.register-form input.button {
+  width: auto;
+  color: white;
+  background: #5cb48e;
+  text-transform: uppercase;
+  border: 0;
+  outline: 0;
+  margin-bottom: 0;
+  padding: 12px 18px;
+}
+
+
+
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.ahu_logo {
+    width: 500px;
+    margin: auto;
+}
+
+footer {
+    background-color: #283f50;
+
+}
+
+.footer_font {
+    color: #393041;
+}
+
+header {
+    background-color: #fcfffa;
+    background-size: contain;
+
+}
+
+footer {
+    z-index: 11;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #d5fff4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo-header {
+    position: relative;
+    top: -35%;
+}
+
+.search {
+    margin-left: 100px;
+    margin-top: 3px;
+}
+
+.login_register {
+    position: absolute;
+    margin: -46px 0px 0px 1250px;
+}
+
+.destroy_login {
+    margin: 0px 0 0 -50px;
+}
+
+
+
+.link_font {
+    color: #335d8a;
+
+}
+
+.top-header {
+  color: #00FFCC;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+

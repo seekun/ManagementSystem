@@ -1,0 +1,145 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+ <title>{% block title %}user_profile{% endblock %}</title>
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/my.css' %}">
+</head>
+<body>
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+            <input type="hidden" name="id" value="{{ p.id }}">
+            <div>
+                <span>
+                    论文题目:
+                </span>
+                <input type="text" name="title" value="{{ p.title }}">
+            </div>
+            <div>
+                <span>
+                    出版杂志:
+                </span>
+                <input type="text" name="periodical" value="{{ p.periodical }}">
+            </div>
+            <div>
+                <span>
+                    卷:
+                </span>
+                <input type="text" name="volume" value="{{ p.volume }}">
+            </div>
+            <div>
+                <span>
+                    页:
+                </span>
+                <input type="text" name="page" value="{{ p.page }}">
+            </div>
+            <div>
+                <span>
+                    DOI:
+                </span>
+                <input type="text" name="DOI" value="{{ p.DOI }}">
+            </div>
+            <div>
+                <span>
+                    摘要:
+                </span>
+                <input type="text" name="body" value="{{ p.body }}">
+            </div>
+            <div>
+                <span>
+                    出版年月:
+                </span>
+                <input type="text" name="year" value="{{ p.year }}">
+            </div>
+            <div>
+                <span>
+                    作者关键字:
+                </span>
+                {% for a in p.author_key_word %}
+                <input type="text" name="author_key_word" value="{{ a }}">
+                {% endfor %}
+            </div>
+            <div>
+                <span>
+                    Keywords Plus:
+                </span>
+                {% for a in p.Keywords_Plus %}
+                <input type="text" name="author_key_word" value="{{ a }}">
+                {% endfor %}
+            </div>
+            <div>
+                <span>
+                    通讯作者:
+                </span>
+                <input type="text" name="reprint_author" value="{{ p.reprint_author }}">
+            </div>
+            <div>
+                <span>
+                    通讯作者地址:
+                </span>
+                <input type="text" name="reprint_author_address" value="{{ p.reprint_author_address }}">
+            </div>
+            <div>
+                <span>
+                    作者:
+                </span>
+                {% for a in p.address %}
+                <input type="text" name="address" value="{{ a }}">
+                {% endfor %}
+            </div>
+            <div>
+                <span>
+                    email:
+                </span>
+                <input type="text" name="email" value="{{ p.email }}">
+            </div>
+            <div>
+                <span>
+                    资助机构:
+                </span>
+                <input type="text" name="Funding_Agency" value="{{ p.Funding_Agency }}">
+            </div>
+            <div>
+                <span>
+                    授权号:
+                </span>
+                <input type="text" name="Grant_Number" value="{{ p.Grant_Number }}">
+            </div>
+            <div>
+                <span>
+                    资助信息:
+                </span>
+                <input type="text" name="Fund_information" value="{{ p.Fund_information }}">
+            </div>
+            <div>
+                <span>
+                    ISSN:
+                </span>
+                <input type="text" name="ISSN" value="{{ p.ISSN }}">
+            </div>
+            <div>
+                <span>
+                    eISSN:
+                </span>
+                <input type="text" name="eISSN" value="{{ p.eISSN }}">
+            </div>
+            <input type="submit" class="btn-primary" value="提交">
+    </form>
+
+{% endblock %}
+
+</body>
+</html>

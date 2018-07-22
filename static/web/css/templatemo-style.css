@@ -1,0 +1,312 @@
+@font-face {
+  font-family: 'robotolight';
+  src: url("../fonts/Roboto-Light-webfont.eot");
+  src: url("../fonts/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light-webfont.woff") format("woff"), url("../fonts/Roboto-Light-webfont.ttf") format("truetype"), url("../fonts/Roboto-Light-webfont.svg#robotolight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotoregular';
+  src: url("../fonts/Roboto-Regular-webfont.eot");
+  src: url("../fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular-webfont.woff") format("woff"), url("../fonts/Roboto-Regular-webfont.ttf") format("truetype"), url("../fonts/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotobold';
+  src: url("../fonts/Roboto-Bold-webfont.eot");
+  src: url("../fonts/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold-webfont.woff") format("woff"), url("../fonts/Roboto-Bold-webfont.ttf") format("truetype"), url("../fonts/Roboto-Bold-webfont.svg#robotobold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+    font-family: Arial,Helvetica.Sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+.green {
+	color: #9F3;
+}
+
+.orange {
+	color: #FC0;
+}
+
+.blue {
+	color: #06C;
+}
+logo{
+
+    font-size: 45px;
+    letter-spacing: 2px;
+    font-family: Arial,Helvetica.Sans-serif;
+}
+
+logo .o1{
+    color: #1065e6;
+}
+
+logo .o2{
+    color: #df432e;
+}
+
+logo .o3{
+    color: #ffb709;
+}
+logo .o4{
+    color: #166df1;
+}
+logo .o5{
+    color: #03a25d;
+}
+logo .o6{
+    color: #d64632;
+}
+
+
+.Papertitle{
+    margin: 20px 5px 30px;
+    font-size: 25px;
+    letter-spacing: -1px;
+    line-height: 1.4;
+}
+
+
+.Paperauthor{
+    font-size: 5px;
+    letter-spacing: -1x;
+}
+
+basic{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 15px;
+}
+
+div{
+    border: 1px #0F0F0F solid;
+}
+
+.abstract{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    margin: 30px 0px 30px;
+}
+
+.Authorinformation{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    margin: 30px 0px 30px;
+}
+
+.Funding{
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 14px;
+}
+
+.Periodical{
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+.Periodical .SourceTitle{
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    width: 89%;
+    color: #666;
+    font-weight: bold;
+    font-family: "Source Sans Pro",Arial,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+.field{
+    margin-top: 3px;
+    color: #666;
+    margin-right: 20px;
+    font-size: 15px;
+    line-height: 22px;
+    font-family: "Source Sans Pro",Arial,sans-serif;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.Periodical .field{
+    margin-top: 3px;
+    color: #666;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;
+    line-height: 22px;
+    font-family: "Source Sans Pro",Arial,sans-serif;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.Impact_Factor_table {
+    margin: 0 20px 0 20px;
+}
+
+.Impact_Factor_table {
+    margin: 0 20px 0 20px;
+}
+
+.Periodical th{
+    padding: 0 20px 0 0;
+    text-align: left;
+    color: #666;
+}
+
+.Periodical td{
+    padding: 0 20px 10px 0;
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    color: #666;
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+.JCR_Category_table{
+    outline: 1px solid #bababa;
+    border-collapse: collapse;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.JCR_Category_table th{
+    vertical-align: middle;
+    padding: 5px 10px 5px 5px;
+    background: #f3f3f3;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    color: #666;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    white-space: nowrap
+}
+
+.JCR_Category_table td {
+    vertical-align: middle;
+    padding: 5px 10px 5px 5px;
+    border: 1px solid #ccc;
+    color: #666;
+    text-align: center;
+    background-color: #fff;
+}
+
+.RegMark {
+    font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
+    font-size: 140%;
+    vertical-align: top!important;
+    padding-left: 2px;
+}
+
+.labele{
+    color: #666;
+    padding-right: 4px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "Source Sans Pro",Arial,sans-serif;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+.focusable-link:visited {
+    TEXT-DECORATION: none;
+    outline: 2px solid #f8f8f8!important;
+    border: 1px solid #f8f8f8!important;
+}
+
+.focusable-link:link {
+    outline: 2px solid #f8f8f8;
+    border: 1px solid #f8f8f8;
+}
+
+
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.ahu_logo {
+    width: 500px;
+    margin: auto;
+}
+
+footer {
+    background-color: #283f50;
+
+}
+
+.footer_font {
+    color: #393041;
+}
+
+header {
+    background-color: #fcfffa;
+    background-size: contain;
+
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fcfffa;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo {
+    position: relative;
+}
+
+.search {
+    margin-left: 100px;
+    margin-top: 3px;
+}
+
+.login_register {
+    position: absolute;
+    margin: -46px 0px 0px 1250px;
+}
+
+.destroy_login {
+    margin: 0px 0 0 -50px;
+}
+
+
+
+.link_font {
+    color: #335d8a;
+
+}

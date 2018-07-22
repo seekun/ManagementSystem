@@ -1,0 +1,81 @@
+{% extends 'web/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <title>{% block title %}Search{% endblock %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/my.css' %}">
+
+</head>
+<body>
+{% block content %}
+ <form action="/web/search" method="GET" class="search-form">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="input-group">
+                 <div>
+                        <fieldset class="col-md-offset-2 col-md-6">
+                            <input name="q" type="text" class="text"  placeholder="您要搜索的内容">
+                        </fieldset>
+                        <div class="input-group-btn">
+                            <select name="gender" id="selectid" class="btn-info btn-lg" onchange="submitForm();">
+                                     <option value="title">标题</option>
+                                     <option value="author">作者</option>
+                                     <option value="KeyWords_Plus">关键字</option>
+                                     <option value="periodical">出版物名称</option>
+                                     <option value="DOI">DOI</option>
+                                     <option value="year">出版年</option>
+                             </select>
+                          </div><!-- /btn-group -->
+
+                  </div>
+
+                   <div id="select2" class="">
+                        <fieldset class="col-md-offset-2 col-md-6">
+                            <input name="q2" type="text" class="text"  placeholder="您要搜索的内容">
+                        </fieldset>
+                        <div class="input-group-btn">
+                            <select name="gender2" id="selectid" class="btn-info btn-lg" onchange="submitForm();">
+                                     <option value="title">标题</option>
+                                     <option value="author">作者</option>
+                                     <option value="KeyWords_Plus">关键字</option>
+                                     <option value="periodical">出版物名称</option>
+                                     <option value="DOI">DOI</option>
+                                     <option value="year">出版年</option>
+                             </select>
+                          </div><!-- /btn-group -->
+
+                  </div>
+
+                <span class="input-group-btn">
+                 <input id="btnselect" type="submit" class="btn-info btn-lg" onchange="getValue()" value="搜索">
+                </span>
+            </div><!-- /input-group -->
+             <div id="add_button">
+                    <button>hide</button>
+              </div>
+                 <script>
+
+                    $("#add_button").click(function() {
+                      $("#select2").removeClass("");
+                        $("#select2").addClass("hide");
+                    })
+                </script>
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+ </form>
+
+{% endblock %}
+</body>
+</html>

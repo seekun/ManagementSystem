@@ -1,0 +1,68 @@
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.ahu_logo {
+    width: 500px;
+    margin: auto;
+}
+
+footer {
+    background-color: #283f50;
+
+}
+
+.footer_font {
+    color: #393041;
+}
+
+header {
+    background-color: #fcfffa;
+    background-size: contain;
+
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fcfffa;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo {
+    position: relative;
+    top: -35%;
+}
+
+.search {
+    margin-left: 100px;
+    margin-top: 3px;
+}
+
+.login_register {
+    position: absolute;
+    margin: -46px 0px 0px 1250px;
+}
+
+.destroy_login {
+    margin: 0px 0 0 -50px;
+}
+
+
+
+.link_font {
+    color: #abb8ff;
+
+}
+.index_change {
+    padding: 0 -200px 0 200px;
+}
+.button-holder.search_position {
+    position: absolute;
+    margin: -10px -1000px 0 0;
+}
