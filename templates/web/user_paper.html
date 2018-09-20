@@ -16,55 +16,7 @@
 </head>
 <body>
 {% block content %}
-    <div class="ui center segment">
-         <h2>你已登录，欢迎你：<a href="#">{{ user.username }}</a></h2>
-         <form action="" method="GET">
-         {% csrf_token %}
-          <input type="hidden" name="q"  value="{{ user.english_name }}"/>
-          <input type="hidden" name="q2"  value="{{ user.english_name2 }}"/>
-          <input type="hidden" name="q3"  value="{{ user.english_name3 }}"/>
-          <input type="hidden" name="q4"  value="{{ user.english_name4 }}"/>
-          <input type="submit"  value="查看您的论文信息">
-        </form>
-    </div>
-    <div class="main-content">
-        <table class="ui table">
-          <thead>
-            <tr>
-                  <th>论文题目</th>
-                  <th>作者</th>
-                  <th>期刊</th>
-                  <th>卷</th>
-                  <th>期</th>
-                  <td>出版年</td>
-                  <td>等级</td>
-                <th>信息是否正确</th>
-            </tr>
-          </thead>
-          <tbody>
-          {%  for item in find %}
-            <tr>
-                 <td>{{ item.title }}</td>
-                 <td>{{ item.author }}</td>
-                 <td>{{ item.volume }}</td>
-                 <td>{{ item.stage }}</td>
-                 <td>{{ item.year}}</td>
-                 <td>
-                    <button class="ui positive basic button">
-                        正确
-                    </button>
-                    <button class="ui negative button button">
-                        错误
-                    </button>
-
-                </td>
-            </tr>
-          {% endfor %}
-        </table>
-    </div>
-    <div class="footer">
-        <p>&copy;安徽大学论文管理系统</p>
-    </div>
+    
 {% endblock %}
 </body>
 </html>

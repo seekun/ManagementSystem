@@ -240,26 +240,90 @@ from .utils import render_to_pdf  # created in step 4
 from django.template.loader import get_template
 
 
-class GeneratePDF(View):
-    def get(self, request, *args, **kwargs):
-    # def get(self, request):
-        template = get_template('pdf/invoice.html')
-        context = {
-            "invoice_id": 123,
-            "customer_name": "John Cooper",
-            "amount": 1399.99,
-            "today": "Today",
-        }
-        html = template.render(context)
-        return HttpResponse(html)
-        # pdf = render_to_pdf('pdf/invoice.html', context)
-        # if pdf:
-        #     response = HttpResponse(pdf, content_type='application/pdf')
-        #     filename = "Invoice_%s.pdf" % ("12341231")
-        #     content = "inline; filename='%s'" % (filename)
-        #     download = request.GET.get("download")
-        #     if download:
-        #         content = "attachment; filename='%s'" % (filename)
-        #     response['Content-Disposition'] = content
-        #     return response
-        # return HttpResponse("Not found")
+#
+# class GeneratePDF(View):
+#     def get(self, request, *args, **kwargs):
+#         # def get(self, request):
+#         template = get_template('web/invoice.html')
+#         context = {
+#             "invoice_id": 123,
+#             "customer_name": "John Cooper",
+#             "amount": 1399.99,
+#             'today': "Today",
+#         }
+#         html = template.render(context)
+#         pdf = render_to_pdf('web/invoice.html', context)
+#
+#         if pdf:
+#             response = HttpResponse(pdf, content_type='application/pdf')
+#             filename = "Invoice_%s.pdf" % ("12341231")
+#             content = "inline; filename='%s'" % (filename)
+#             download = request.GET.get("download")
+#             if download:
+#                 content = "attachment; filename='%s'" % (filename)
+#             response['Content-Disposition'] = content
+#             return response
+#         return HttpResponse("Not found")
+#
+# def pdf(request, title=None):
+#     template = get_template('web/invoice.html')
+#     context = {}
+#     context['title'] = title
+#     print(title)
+#     html = template.render(context)
+#     pdf = render_to_pdf('web/invoice.html', context)
+#     if pdf:
+#         response = HttpResponse(pdf, content_type='application/pdf')
+#         filename = "Invoice_%s.pdf" % ("12341231")
+#         content = "inline; filename='%s'" % (filename)
+#         download = request.GET.get("download")
+#         if download:
+#             content = "attachment; filename='%s'" % (filename)
+#         response['Content-Disposition'] = content
+#         return response
+#     return HttpResponse("Not found")
+#
+
+def print_paper(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        # title = title.decode('utf-8')
+        # context = {}
+        # context['title'] = title
+        # print(context['title'])
+        template = get_template('web/invoice.html')
+        context = {}
+        context['title'] = title
+        # html = template.render(context)
+        pdf = render_to_pdf('web/invoice.html', context)
+        if pdf:
+            response = HttpResponse(pdf, content_type='application/pdf')
+            filename = "Invoice_%s.pdf" % ("12341231")
+            content = "inline; filename='%s'" % (filename)
+            download = request.GET.get("download")
+            if download:
+                content = "attachment; filename='%s'" % (filename)
+            response['Content-Disposition'] = content
+            return response
+        return HttpResponse("Not found")
+
+        return redirect(to='/web/pdf/')
+    return render(request, 'web/print.html')
+
+
+
+# from django.conf import settings
+# from easy_pdf.views import PDFTemplateView
+#
+# class HelloPDFView(PDFTemplateView):
+#     template_name = 'web/pdf.html'
+#
+#     base_url = 'file://' + settings.STATIC_ROOT
+#     download_filename = 'hello.pdf'
+#
+#     def get_context_data(self, **kwargs):
+#         return super(HelloPDFView, self).get_context_data(
+#             pagesize='A4',
+#             title='Hi there!',
+#             **kwargs
+#         )

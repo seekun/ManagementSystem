@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Print</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+      <div>
+        <input type="text" placeholder="输入打印PDF的标题" name="title">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    <a href="pdf">点击下载PDF</a>
+</body>
+</html>

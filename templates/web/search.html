@@ -41,7 +41,7 @@
 
                   </div>
 
-                   <div id="select2" class="">
+                   <div id="select2" class="hide">
                         <fieldset class="col-md-offset-2 col-md-6">
                             <input name="q2" type="text" class="text"  placeholder="您要搜索的内容">
                         </fieldset>
@@ -58,20 +58,23 @@
 
                   </div>
 
+
+                   <div id="add_button">
+                    <a>增加筛选字段</a>
+                  </div>
+                     <script>
+
+                        $("#add_button").click(function() {
+                          $("#select2").removeClass("hide");
+                            $("#select2").addClass("");
+                        })
+                    </script>
+
                 <span class="input-group-btn">
                  <input id="btnselect" type="submit" class="btn-info btn-lg" onchange="getValue()" value="搜索">
                 </span>
             </div><!-- /input-group -->
-             <div id="add_button">
-                    <button>hide</button>
-              </div>
-                 <script>
 
-                    $("#add_button").click(function() {
-                      $("#select2").removeClass("");
-                        $("#select2").addClass("hide");
-                    })
-                </script>
           </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
  </form>

@@ -1,0 +1,8 @@
+Requirement already satisfied: xhtml2pdf in /Users/sk/anaconda3/lib/python3.6/site-packages (0.2.2)
+Requirement already satisfied: httplib2 in /Users/sk/anaconda3/lib/python3.6/site-packages (from xhtml2pdf) (0.11.3)
+Requirement already satisfied: six in /Users/sk/anaconda3/lib/python3.6/site-packages (from xhtml2pdf) (1.11.0)
+Requirement already satisfied: Pillow in /Users/sk/anaconda3/lib/python3.6/site-packages (from xhtml2pdf) (5.2.0)
+Requirement already satisfied: reportlab>=3.0 in /Users/sk/anaconda3/lib/python3.6/site-packages (from xhtml2pdf) (3.5.1)
+Requirement already satisfied: html5lib>=1.0 in /Users/sk/anaconda3/lib/python3.6/site-packages (from xhtml2pdf) (1.0.1)
+Requirement already satisfied: pyPdf2 in /Users/sk/anaconda3/lib/python3.6/site-packages (from xhtml2pdf) (1.26.0)
+Requirement already satisfied: webencodings in /Users/sk/anaconda3/lib/python3.6/site-packages (from html5lib>=1.0->xhtml2pdf) (0.5.1)
