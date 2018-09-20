@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptSettings">
+<<<<<<< HEAD
     <option name="languageLevel" value="JSX" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (django_auth_example_old)" project-jdk-type="Python SDK" />
+=======
+    <option name="languageLevel" value="ES6" />
+  </component>
+<<<<<<< HEAD
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (django_auth_example_new)" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (django_auth_example_old)" project-jdk-type="Python SDK" />
+>>>>>>> change_model
+>>>>>>> ac2b5a8838babd24f0dc1cbfc2ea53ea173f8e85
 </project>

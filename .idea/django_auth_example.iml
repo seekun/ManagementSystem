@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
+<<<<<<< HEAD
   <component name="FacetManager">
     <facet type="django" name="Django">
       <configuration>
@@ -28,5 +29,20 @@
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="py.test" />
     <option name="PROJECT_TEST_RUNNER" value="py.test" />
+=======
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+<<<<<<< HEAD
+    <orderEntry type="jdk" jdkName="Python 3.7 (django_auth_example_new)" jdkType="Python SDK" />
+=======
+    <orderEntry type="jdk" jdkName="Python 3.6 (django_auth_example_old)" jdkType="Python SDK" />
+>>>>>>> change_model
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+>>>>>>> ac2b5a8838babd24f0dc1cbfc2ea53ea173f8e85
   </component>
 </module>

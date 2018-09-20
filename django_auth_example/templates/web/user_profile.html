@@ -1,0 +1,97 @@
+
+{% extends 'web/base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+      <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/my.css' %}">
+</head>
+<body>
+{% block content %}
+    <div class="col-md-8 col-centered">
+
+        <div class="page-header">
+
+              <div class="alert alert-success" role="alert">
+                  你已登录，欢迎你：{{ user.username }}
+              </div>
+
+              <br>
+              <a href="/users/edit_profile" class="alert alert-success">完善个人信息</a>
+                 <a href="{% url 'password_change' %}?next={{ request.path }}">
+
+                                 <button class="btn btn-primary">
+                                        修改密码
+                                  </button>
+                             </a>
+
+                  <br>
+              <br>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="q" value="{{ user.english_name }}"/>
+                 <input type="hidden" name="q2" value="{{ user.english_name2 }}"/>
+                 <input type="hidden" name="q3" value="{{ user.english_name3}}"/>
+                 <input type="hidden" name="q4" value="{{ user.english_name4 }}"/>
+                <input class="alert alert-info" type="submit" value="查看您的论文信息">
+            </form>
+
+        </div>
+        <div class="panel panel-default">
+        <div class="panel-heading">
+
+        </div>
+        <div class="panel-body">
+
+
+            <div class="panel panel-default">
+              <!-- Default panel contents -->
+              <div class="panel-heading">
+                  <button class=" btn-primary btn-lg">个人信息</button>
+              </div>
+
+              <!-- Table -->
+              <table class="table">
+                    <table class="ui table">
+                        <thead>
+                        <tr>
+                            <th class="btn-info">用户名</th>
+                            <th class="btn-info">工号</th>
+                            <th class="btn-info">所属院系</th>
+                            <th class="btn-info">论文署名一</th>
+                             <th class="btn-info">论文署名二</th>
+                             <th class="btn-info">论文署名三</th>
+                             <th class="btn-info">论文署名四</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>{{ user.username }}</td>
+                             <td>{{ user.user_number }}</td>
+                            <td>{{ user.department }}</td>
+                            <td>{{ user.english_name }}</td>
+                            <td>{{ user.english_name2 }}</td>
+                            <td>{{ user.english_name3 }}</td>
+                            <td>{{ user.english_name4 }}</td>
+
+                        </tr>
+                        </tbody>
+
+                    </table>
+              </table>
+</div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#b1").click(function(){
+        $('.hideClass').show();
+    });
+});
+</script>
+</head>
+<body>
+
+
+    <span>
+        english<br>
+        <input type="text" name="english_name1" value="english_name1" id="e1">
+   </span>
+    <br>
+
+         <span class="hideClass" style="display:none;">english2<br></span>
+        <input class="hideClass" style="display:none;" type="text" name="english_name1" value="english_name1" id="e2"  >
+
+
+    <br><br>
+    <button id="b1">add english name</button>
+
+</body>
+</html>
+
+

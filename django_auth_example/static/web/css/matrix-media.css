@@ -1,0 +1,50 @@
+body {
+	background:#2E363F;
+}
+
+#header {
+	background-color: #1f262d;
+   margin-top:10px;
+}
+
+#sidebar > ul{border-bottom: 1px solid #37414b}
+#sidebar > ul > li {
+	border-top: 1px solid #37414b; border-bottom: 1px solid #1f262d;
+}
+#sidebar > ul > li.active {
+    background-color: #27a9e3; border-bottom: 1px solid #27a9e3;  border-top: 1px solid #27a9e3;
+}
+#sidebar > ul > li.active a{ color:#fff; text-decoration:none;}
+
+#sidebar > ul > li > a > .label {
+	background-color:#F66;
+}
+#sidebar > ul > li > a:hover {
+	background-color: #27a9e3; color:#fff;
+}
+
+.dropdown-menu li a:hover, .dropdown-menu .active a, .dropdown-menu .active a:hover {
+    color: #eeeeee;
+	background:#666;
+   
+}
+.top_message{ float:right; padding:20px 12px; position:relative; top:-13px; border-left:1px solid #3D3A37; font-size:14px; line-height:20px; *line-height:20px; color:#333; text-align:center;  vertical-align:middle; cursor:pointer; }
+.top_message:hover{ background:#000}
+.rightzero{ right:0px; display:none;}
+@media (max-width: 480px) {
+	#sidebar > a {
+		background:#27a9e3;
+		
+	}
+	.quick-actions_homepage .quick-actions li{ min-width:100%;}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	#sidebar > ul ul:before {
+	}
+	#sidebar > ul ul:after {
+		border-right: 6px solid #222222;
+    }
+	.quick-actions_homepage .quick-actions li{ min-width:47%;}
+}
+

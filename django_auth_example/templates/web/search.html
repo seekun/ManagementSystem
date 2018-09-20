@@ -1,0 +1,36 @@
+
+{% extends 'web/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/my.css' %}">
+</head>
+<body>
+{% block content %}
+  <div class="col-md-4 col-centered">
+        <form action="" method="GET" class="btn-lg">
+              <input type="text" name="q" placeholder="输入要查的关键字"/>
+                <br>
+              <input type="radio" name="gender" value="title" checked> 标题<br>
+              <input type="radio" name="gender" value="author"> 作者<br>
+              <input type="radio" name="gender" value="KeyWords_Plus"> 关键字<br>
+              <input type="radio" name="gender" value="periodical">出版物名称<br>
+              <input type="radio" name="gender" value="DOI"> DOI<br>
+              <input type="radio" name="gender" value="year">出版年<br>
+              <input type="submit" class="btn-primary" value="搜索">
+        </form>
+  </div>
+{% endblock %}
+</body>
+</html>

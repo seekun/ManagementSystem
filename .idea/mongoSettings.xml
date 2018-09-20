@@ -4,6 +4,10 @@
     <option name="serverConfigurations">
       <list>
         <ServerConfiguration>
+<<<<<<< HEAD
+=======
+          <option name="label" value="wos" />
+>>>>>>> ac2b5a8838babd24f0dc1cbfc2ea53ea173f8e85
           <option name="serverUrls">
             <list>
               <option value="localhost:27017" />
@@ -15,5 +19,9 @@
         </ServerConfiguration>
       </list>
     </option>
+<<<<<<< HEAD
+=======
+    <option name="shellPath" value="/usr/local/bin/mongo" />
+>>>>>>> ac2b5a8838babd24f0dc1cbfc2ea53ea173f8e85
   </component>
 </project>
