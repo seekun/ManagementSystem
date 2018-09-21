@@ -19,7 +19,7 @@ templates/users/show_user.json
 *.json
 upload
 .idea
-
+requirements.txt
 ### OSX ###
 .DS_Store
 .AppleDouble
