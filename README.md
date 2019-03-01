@@ -1,6 +1,6 @@
-# ManagementSystem
-学校的论文管理系统
+# 科研成果自动校验系统
 
+> 技术栈说明
 
 • 使用 Request,  BeautifulSoup 等第三库爬取 Web of Science 中的论文
 
